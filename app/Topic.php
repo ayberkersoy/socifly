@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Topic extends Model
 {
+    protected $guarded = [];
+
     public function forum()
     {
         return $this->belongsTo(Forum::class);
