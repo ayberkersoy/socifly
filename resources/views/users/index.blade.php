@@ -55,7 +55,6 @@
                                                 <p><i class="fa mr--8 fa-user"></i>{{ $user->username }}</p>
                                                 <p><i class="fa mr--8 fa-mail-forward"></i>{{ $user->email }}</p>
                                                 <p><i class="fa mr--8 fa-briefcase"></i>{{ $user->job }}</p>
-                                                <p><i class="fa mr--8 fa-info-circle"></i>{{ $user->biography }}</p>
                                             </div>
                                         </div>
                                         <!-- Member Item End -->
