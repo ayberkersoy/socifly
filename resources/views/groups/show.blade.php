@@ -15,19 +15,20 @@
 
             <div class="cover--user-activity">
                 <p><i class="fa mr--8 fa-clock-o"></i>{{ $group->created_at->format('d/m/Y') }}</p>
+                <p><i class="fa mr--8 fa-user-o"></i>{{ $group->users->count() }} Kişi</p>
             </div>
 
-            <div class="cover--avatars">
-                <ul class="nav">
-                    <li>
-                        <a href="#" data-overlay="0.3" data-overlay-color="primary">
-                            <img src="{{ asset($group->user->avatar) }}" alt="">
-                        </a>
-                    </li>
-                </ul>
+            {{--<div class="cover--avatars">--}}
+                {{--<ul class="nav">--}}
+                    {{--<li>--}}
+                        {{--<a href="#" data-overlay="0.3" data-overlay-color="primary">--}}
+                            {{--<img src="{{ asset($group->user->avatar) }}" alt="">--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
 
-                <p>Grup Admini</p>
-            </div>
+                {{--<p>Grup Admini</p>--}}
+            {{--</div>--}}
 
             <div class="cover--user-desc fw--400 fs--18 fstyle--i text-darkest">
                 <p>{{ $group->description }}</p>
