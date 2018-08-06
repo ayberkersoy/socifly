@@ -39,7 +39,7 @@
                             <div class="col-md-3 col-xs-6 col-xxs-12">
                                 <!-- Box Item Start -->
                                 <div class="box--item text-center">
-                                    <a href="/groups/{{ $event->tag }}" class="img" data-overlay="0.1">
+                                    <a href="/events/{{ $event->tag }}" class="img" data-overlay="0.1">
                                         <img src="{{ asset($event->banner) }}" alt="">
                                     </a>
 
@@ -49,7 +49,7 @@
                                         </div>
 
                                         <div class="title">
-                                            <h2 class="h6"><a href="/groups/{{ $event->tag }}">{{ $event->name }}</a></h2>
+                                            <h2 class="h6"><a href="/events/{{ $event->tag }}">{{ $event->name }}</a></h2>
                                         </div>
 
                                         <div class="meta">
@@ -61,7 +61,7 @@
                                         </div>
 
                                         <div class="action">
-                                            <a href="/groups/{{ $event->tag }}">Grup Detay<i class="fa ml--10 fa-caret-right"></i></a>
+                                            <a href="/events/{{ $event->tag }}">Grup Detay<i class="fa ml--10 fa-caret-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
