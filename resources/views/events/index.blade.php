@@ -53,15 +53,13 @@
                                         </div>
 
                                         <div class="meta">
-                                            <p><i class="fa mr--8 fa-clock-o"></i>{{ $event->created_at->diffForHumans() }}</p>
-                                        </div>
-
-                                        <div class="desc text-darker">
-                                            <p>{{ $event->description }}</p>
+                                            <p><i class="fa mr--8 fa-calendar"></i>{{ $event->date }}</p>
+                                            <p><i class="fa mr--8 fa-clock-o"></i>{{ $event->start_time }}</p>
+                                            <p><i class="fa mr--8 fa-map-marker"></i>{{ $event->location }}</p>
                                         </div>
 
                                         <div class="action">
-                                            <a href="/events/{{ $event->tag }}">Grup Detay<i class="fa ml--10 fa-caret-right"></i></a>
+                                            <a href="/events/{{ $event->tag }}">Etkinlik Detay<i class="fa ml--10 fa-caret-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
