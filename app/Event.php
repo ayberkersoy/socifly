@@ -8,6 +8,11 @@ class Event extends Model
 {
     protected $guarded = [];
 
+    public function getRouteKeyName()
+    {
+        return 'tag';
+    }
+
     public function group()
     {
         return $this->belongsTo(Group::class);
