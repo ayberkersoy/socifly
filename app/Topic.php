@@ -22,4 +22,9 @@ class Topic extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function topic_replies()
+    {
+        return $this->hasMany(TopicReply::class);
+    }
 }

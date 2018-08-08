@@ -17,4 +17,14 @@ class SubForum extends Model
     {
         return $this->belongsTo(Forum::class);
     }
+
+    public function topic()
+    {
+        return $this->hasMany(Topic::class);
+    }
+
+    public function topic_replies()
+    {
+        return $this->hasMany(TopicReply::class);
+    }
 }

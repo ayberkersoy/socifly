@@ -12,4 +12,9 @@ class ForumController extends Controller
         $forums = Forum::all();
         return view('forums.index', compact('forums'));
     }
+
+    public function show(Forum $forum)
+    {
+        return view('forums.show', compact('forum'));
+    }
 }

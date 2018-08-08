@@ -76,12 +76,12 @@
                         <div class="topics--list">
                             <table class="table">
                                 <thead class="ff--primary fs--14 text-darkest">
-                                <tr>
-                                    <th>Forum</th>
-                                    <th>Alt Başlıklar</th>
-                                    <th>Konular</th>
-                                    <th>Gönderiler</th>
-                                </tr>
+                                    <tr>
+                                        <th>Forum</th>
+                                        <th>Alt Başlıklar</th>
+                                        <th>Konular</th>
+                                        <th>Gönderiler</th>
+                                    </tr>
                                 </thead>
 
                                 <tbody>

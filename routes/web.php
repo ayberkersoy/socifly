@@ -13,3 +13,4 @@ Route::get('events/{event}', 'EventController@show');
 Route::get('users', 'UserController@index');
 
 Route::get('forum', 'ForumController@index');
+Route::get('forum/{forum}', 'ForumController@show');
