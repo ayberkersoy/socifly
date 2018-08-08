@@ -8,6 +8,11 @@ class Topic extends Model
 {
     protected $guarded = [];
 
+    public function getRouteKeyName()
+    {
+        return 'tag';
+    }
+
     public function forum()
     {
         return $this->belongsTo(Forum::class);

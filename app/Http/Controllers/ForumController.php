@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Forum;
 use App\SubForum;
+use App\Topic;
 use Illuminate\Http\Request;
 
 class ForumController extends Controller
@@ -22,5 +23,10 @@ class ForumController extends Controller
     public function showSubForum(Forum $forum, SubForum $subForum)
     {
         return view('forums.sub-forum', compact('forum', 'subForum'));
+    }
+
+    public function showTopicReplies(Forum $forum, SubForum $subForum, Topic $topic)
+    {
+        return view('forums.topic-forum', compact('forum', 'subForum', 'topic'));
     }
 }

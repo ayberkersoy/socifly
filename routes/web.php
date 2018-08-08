@@ -15,3 +15,4 @@ Route::get('users', 'UserController@index');
 Route::get('forum', 'ForumController@index');
 Route::get('forum/{forum}', 'ForumController@show');
 Route::get('forum/{forum}/{subForum}/sub', 'ForumController@showSubForum');
+Route::get('forum/{forum}/{subForum}/{topic}/replies', 'ForumController@showTopicReplies');

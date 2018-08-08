@@ -73,7 +73,7 @@
                                     @foreach($forum->topic as $topic)
                                         <tr class="pinned">
                                             <td>
-                                                <h4 class="h6 fw--500 text-darkest"><a href="/forum/{{ $forum->tag }}/{{$topic->tag}}/replies" class="btn-link">{{ $topic->name }}</a></h4>
+                                                <h4 class="h6 fw--500 text-darkest"><a href="/forum/{{ $forum->tag }}/{{ $sub_forum->tag }}/{{ $topic->tag }}/replies" class="btn-link">{{ $topic->name }}</a></h4>
                                             </td>
                                             <td>
                                                 <p class="ff--primary fw--500 fs--14 text-darkest">{{ $topic->topic_replies->count() }}</p>
