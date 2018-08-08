@@ -28,4 +28,10 @@ class GroupController extends Controller
     {
         return view('groups.group-forum', compact('group'));
     }
+
+    public function usersIndex(Group $group)
+    {
+        $users = $group->users()->paginate(12);
+        return view('groups.group-users', compact('group', 'users'));
+    }
 }

@@ -66,6 +66,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/forum">
+                            <span>Forum</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="/users">
                             <span>Üyeler</span>
                         </a>
