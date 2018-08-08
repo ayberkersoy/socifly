@@ -40,7 +40,7 @@
                                 @foreach($forum->sub_forum as $sub_forum)
                                     <tr>
                                         <td>
-                                            <h4 class="h6 fw--500 text-darkest"><a href="/forum/{{ $sub_forum->tag }}/sub" class="btn-link">{{ $sub_forum->name }}</a></h4>
+                                            <h4 class="h6 fw--500 text-darkest"><a href="/forum/{{ $forum->tag }}/{{ $sub_forum->tag }}/sub" class="btn-link">{{ $sub_forum->name }}</a></h4>
 
                                             <p>{{ $sub_forum->description }}</p>
                                         </td>
