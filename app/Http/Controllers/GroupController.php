@@ -23,4 +23,9 @@ class GroupController extends Controller
     {
         return view('groups.show', compact('group'));
     }
+
+    public function forumIndex(Group $group)
+    {
+        return view('groups.group-forum', compact('group'));
+    }
 }

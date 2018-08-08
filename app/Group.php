@@ -27,4 +27,9 @@ class Group extends Model
     {
         return $this->hasMany(GroupPost::class);
     }
+
+    public function forum()
+    {
+        return $this->hasMany(Forum::class);
+    }
 }

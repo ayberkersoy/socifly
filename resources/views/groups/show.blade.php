@@ -91,8 +91,8 @@
                         <!-- Activity List End -->
                     </div>
 
-                @if(Auth::check())
-                    <!-- Comment Form Start -->
+                    @if(Auth::check())
+                        <!-- Comment Form Start -->
                         <div class="comment--form pt--30" data-form="validate">
                             <h4 class="h4 pb--15">Bir gönderi paylaş</h4>
 
