@@ -15,12 +15,21 @@
 
             <!-- Header Topbar Links Start -->
             <ul class="header--topbar-links nav ff--primary float--right">
-                <li>
-                    <a href="/profile" class="btn-link">
-                        <i class="fa mr--8 fa-user-o"></i>
-                        <span>Hesabım</span>
-                    </a>
-                </li>
+                @if(Auth::check())
+                    <li>
+                        <a href="/profile" class="btn-link">
+                            <i class="fa mr--8 fa-user-o"></i>
+                            <span>Hesabım</span>
+                        </a>
+                    </li>
+                @else
+                    <li class="pt--10">
+                        <button class="btn btn-success" onclick="location.href='/login';">Giriş Yap</button>
+                    </li>
+                    <li class="pt--10">
+                        <button class="btn btn-info" onclick="location.href='/register';">Kayıt Ol</button>
+                    </li>
+                @endif
             </ul>
             <!-- Header Topbar Links End -->
         </div>
