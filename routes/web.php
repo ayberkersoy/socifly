@@ -23,3 +23,5 @@ Route::post('/groups/{group}/posts', 'GroupPostController@store');
 Route::post('/groups/{group}/users', 'GroupController@joinGroup');
 
 Route::post('/events/{event}/users', 'EventController@joinEvent');
+
+Route::post('forum/{forum}/{subForum}/{topic}/posts', 'TopicReplyController@store');

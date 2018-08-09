@@ -77,12 +77,13 @@
                         <div class="comment--form pt--30" data-form="validate">
                             <h4 class="h4 pb--15">Bir gönderi paylaş</h4>
 
-                            <form action="/groups//posts" method="POST">
+                            <form action="/forum/{{ $forum->tag }}/{{ $subForum->tag }}/{{ $topic->tag }}/posts" method="POST">
+                                {{ csrf_field() }}
                                 <div class="row gutter--15">
 
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <textarea name="post" placeholder="Gönderi *" class="form-control" required></textarea>
+                                            <textarea name="reply" placeholder="Gönderi *" class="form-control" required></textarea>
                                         </div>
                                     </div>
 
