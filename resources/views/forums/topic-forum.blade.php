@@ -12,8 +12,8 @@
             <ul class="breadcrumb text-gray ff--primary">
                 <li><a href="/" class="btn-link">Anasayfa</a></li>
                 <li><a href="/forum" class="btn-link">Forum</a></li>
-                <li><a href="/forum/{{ $forum->tag }}">{{ $forum->name }}</a></li>
-                <li><a href="/forum/{{ $forum->tag }}/{{ $subForum->tag }}/sub">{{ $subForum->name }}</a></li>
+                <li><a href="/forum/{{ $forum->tag }}" class="btn-link">{{ $forum->name }}</a></li>
+                <li><a href="/forum/{{ $forum->tag }}/{{ $subForum->tag }}/sub" class="btn-link">{{ $subForum->name }}</a></li>
                 <li class="active"><span class="text-primary">{{ $topic->name }}</span></li>
             </ul>
         </div>
