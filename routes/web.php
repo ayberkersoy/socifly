@@ -19,4 +19,4 @@ Route::get('forum/{forum}/{subForum}/{topic}/replies', 'ForumController@showTopi
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/groups/{group}/posts', 'GroupPostController@store');

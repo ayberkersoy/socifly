@@ -97,6 +97,7 @@
                             <h4 class="h4 pb--15">Bir gönderi paylaş</h4>
 
                             <form action="/groups/{{ $group->tag }}/posts" method="POST">
+                                {{ csrf_field() }}
                                 <div class="row gutter--15">
 
                                     <div class="col-sm-12">
