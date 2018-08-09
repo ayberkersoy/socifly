@@ -116,11 +116,6 @@
                                                     <input type="text" name="job" class="form-control" placeholder="Meslek">
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <input type="file" name="avatar" class="form-control" placeholder="Avatar">
-                                                </div>
-                                            </div>
 
                                             <div class="col-sm-12 pt--10">
                                                 <button type="submit" class="btn btn-sm btn-primary fs--14">Kayıt Ol</button>
