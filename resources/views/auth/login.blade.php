@@ -31,6 +31,7 @@
                                 <div class="comment--form pt--30" data-form="validate">
                                     <h4 class="h4 pb--15">Giriş Yap</h4>
                                     <form action="/login" method="POST">
+                                        {{ csrf_field() }}
                                         <div class="row gutter--15">
 
                                             <div class="col-sm-12">
@@ -68,6 +69,7 @@
                                 <div class="comment--form pt--30" data-form="validate">
                                     <h4 class="h4 pb--15">Kayıt Ol</h4>
                                     <form action="/register" method="POST">
+                                        {{ csrf_field() }}
                                         <div class="row gutter--15">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
