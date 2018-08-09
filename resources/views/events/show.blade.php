@@ -38,11 +38,16 @@
                             <ul class="nav ff--primary fs--14 fw--500 bg-lighter">
                                 <li class="active"><a href="#">Katılımcılar: {{ $event->users->count() }}</a></li>
                                 @if(Auth::check())
-                                    <li class="pull-right">
-                                        <form action="/events/{{ $event->tag }}/users" method="POST">
-                                            <input type="submit" class="btn btn-info" value="Katıl">
-                                        </form>
-                                    </li>
+                                    @if($event->users()->where('user_id', auth()->id())->exists())
+
+                                    @else
+                                        <li class="pull-right">
+                                            <form action="/events/{{ $event->tag }}/users" method="POST">
+                                                {{ csrf_field() }}
+                                                <input type="submit" class="btn btn-info" value="Katıl">
+                                            </form>
+                                        </li>
+                                    @endif
                                 @endif
                             </ul>
                         </div>

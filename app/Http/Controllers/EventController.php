@@ -17,4 +17,10 @@ class EventController extends Controller
     {
         return view('events.show', compact('event'));
     }
+
+    public function joinEvent(Event $event)
+    {
+        $event->users()->attach(auth()->id());
+        return back();
+    }
 }
