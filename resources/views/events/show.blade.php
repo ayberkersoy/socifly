@@ -62,7 +62,7 @@
                                         <div class="member--item">
                                             <div class="img img-circle">
                                                 <a href="#" class="btn-link">
-                                                    <img src="{{ asset($user->image) }}" alt="">
+                                                    <img src="{{ $user->avatar }}" alt="">
                                                 </a>
                                             </div>
 
@@ -73,7 +73,9 @@
                                             </div>
 
                                             <div class="activity">
-                                                <p><i class="fa mr--8 fa-clock-o"></i>{{ $user->created_at->diffForHumans() }}</p>
+                                                <p><i class="fa mr--8 fa-user"></i>{{ $user->username }}</p>
+                                                <p><i class="fa mr--8 fa-mail-forward"></i>{{ $user->email }}</p>
+                                                <p><i class="fa mr--8 fa-briefcase"></i>{{ $user->job }}</p>
                                             </div>
                                         </div>
                                         <!-- Member Item End -->
