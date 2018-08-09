@@ -104,27 +104,35 @@
                     </div>
 
                     @if(Auth::check())
-                        <!-- Comment Form Start -->
-                        <div class="comment--form pt--30" data-form="validate">
-                            <h4 class="h4 pb--15">Bir gönderi paylaş</h4>
+                        @if($group->users()->where('user_id', auth()->id())->exists())
+                            <!-- Comment Form Start -->
+                            <div class="comment--form pt--30" data-form="validate">
+                                <h4 class="h4 pb--15">Bir gönderi paylaş</h4>
 
-                            <form action="/groups/{{ $group->tag }}/posts" method="POST">
-                                {{ csrf_field() }}
-                                <div class="row gutter--15">
+                                <form action="/groups/{{ $group->tag }}/posts" method="POST">
+                                    {{ csrf_field() }}
+                                    <div class="row gutter--15">
 
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <textarea name="post" placeholder="Gönderi *" class="form-control" required></textarea>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <textarea name="post" placeholder="Gönderi *" class="form-control" required></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 pt--10">
+                                            <button type="submit" class="btn btn-sm btn-primary fs--14">Paylaş</button>
                                         </div>
                                     </div>
-
-                                    <div class="col-sm-12 pt--10">
-                                        <button type="submit" class="btn btn-sm btn-primary fs--14">Paylaş</button>
-                                    </div>
+                                </form>
+                            </div>
+                            <!-- Comment Form End -->
+                        @else
+                            <div class="alert mt--30">
+                                <div class="alert--inner ff--primary text-white bg-primary">
+                                    <p>Gönderi paylaşabilmek için gruba katılmış olmalısınız.</p>
                                 </div>
-                            </form>
-                        </div>
-                        <!-- Comment Form End -->
+                            </div>
+                        @endif
                     @else
                         <div class="alert mt--30">
                             <div class="alert--inner ff--primary text-white bg-primary">
