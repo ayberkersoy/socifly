@@ -16,3 +16,7 @@ Route::get('forum', 'ForumController@index');
 Route::get('forum/{forum}', 'ForumController@show');
 Route::get('forum/{forum}/{subForum}/sub', 'ForumController@showSubForum');
 Route::get('forum/{forum}/{subForum}/{topic}/replies', 'ForumController@showTopicReplies');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
