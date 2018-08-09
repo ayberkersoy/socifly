@@ -34,4 +34,10 @@ class GroupController extends Controller
         $users = $group->users()->paginate(12);
         return view('groups.group-users', compact('group', 'users'));
     }
+
+    public function joinGroup(Group $group)
+    {
+        $group->users()->attach(auth()->id());
+        return back();
+    }
 }

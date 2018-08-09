@@ -50,6 +50,18 @@
                                 <li class="active"><a href="#">Anasayfa</a></li>
                                 <li><a href="/groups/{{ $group->tag }}/forum">Forum</a></li>
                                 <li><a href="/groups/{{ $group->tag }}/users">Üyeler</a></li>
+                                @if(Auth::check())
+                                    @if($group->users()->where('user_id', auth()->id())->exists())
+
+                                    @else
+                                        <li class="pull-right">
+                                            <form action="/groups/{{ $group->tag }}/users" method="POST">
+                                                {{ csrf_field() }}
+                                                <input type="submit" class="btn btn-info" value="Katıl">
+                                            </form>
+                                        </li>
+                                    @endif
+                                @endif
                             </ul>
                         </div>
                         <!-- Content Nav End -->

@@ -20,3 +20,4 @@ Route::get('forum/{forum}/{subForum}/{topic}/replies', 'ForumController@showTopi
 Auth::routes();
 
 Route::post('/groups/{group}/posts', 'GroupPostController@store');
+Route::post('/groups/{group}/users', 'GroupController@joinGroup');
