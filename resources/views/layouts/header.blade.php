@@ -17,7 +17,7 @@
             <ul class="header--topbar-links nav ff--primary float--right">
                 @if(Auth::check())
                     <li>
-                        <a href="/profile" class="btn-link">
+                        <a href="/users/{{ auth()->user()->username }}" class="btn-link">
                             <i class="fa mr--8 fa-user-o"></i>
                             <span>Hesabım</span>
                         </a>

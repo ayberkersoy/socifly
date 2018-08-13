@@ -11,6 +11,7 @@ Route::get('events', 'EventController@index');
 Route::get('events/{event}', 'EventController@show');
 
 Route::get('users', 'UserController@index');
+Route::get('users/{user}', 'UserController@show');
 
 Route::get('forum', 'ForumController@index');
 Route::get('forum/{forum}', 'ForumController@show');
@@ -27,3 +28,5 @@ Route::post('/events/{event}/users', 'EventController@joinEvent');
 Route::post('forum/{forum}/{subForum}/{topic}/posts', 'TopicReplyController@store');
 
 Route::post('forum/{forum}/{subForum}/topics', 'TopicController@store');
+
+Route::post('users/{user}', 'UserController@update');
