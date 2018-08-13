@@ -21,6 +21,9 @@ Route::get('forum/{forum}/{subForum}/{topic}/replies', 'ForumController@showTopi
 Route::get('{topic_reply}/like', 'TopicReplyController@like');
 Route::get('{topic_reply}/dislike', 'TopicReplyController@dislike');
 
+Route::get('answer/{answer}/like', 'AnswerController@like');
+Route::get('answer/{answer}/dislike', 'AnswerController@dislike');
+
 Auth::routes();
 
 Route::post('/groups/{group}/posts', 'GroupPostController@store');
@@ -33,3 +36,5 @@ Route::post('forum/{forum}/{subForum}/{topic}/posts', 'TopicReplyController@stor
 Route::post('forum/{forum}/{subForum}/topics', 'TopicController@store');
 
 Route::post('users/{user}', 'UserController@update');
+
+Route::post('forum/{forum}/{subForum}/{topic}/{topicReply}/answer', 'AnswerController@store');

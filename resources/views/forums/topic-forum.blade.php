@@ -38,6 +38,7 @@
                                             <div class="header clearfix">
                                                 <p class="date float--left">{{ $topic_reply->created_at->diffForHumans() }}</p>
                                                 <p class="link float--right"><a href="#">#{{ $topic_reply->id }}</a></p>
+                                                <p class="link float--right mr--4"><a href="#" onclick="asd({{ $topic_reply->id }})">Cevapla</a></p>
                                             </div>
 
                                             <div class="body clearfix">
@@ -61,7 +62,7 @@
                                                             {{ $topic_reply->likes }} <i class="fa fa-thumbs-o-up"></i>
                                                         </a> |
                                                         <a href="/{{ $topic_reply->id }}/dislike">
-                                                            {{ $topic_reply->dislikes }} <i class="fa fa-thumbs-o-down"></i>
+                                                            <i class="fa fa-thumbs-o-down"></i> {{ $topic_reply->dislikes }}
                                                         </a>
                                                     </div>
                                                 </div>
@@ -71,7 +72,76 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        @foreach($topic_reply->answers as $answer)
+                                            <div class="topic--reply ml--70 pt--8">
+                                                <div class="header clearfix">
+                                                    <p class="date float--left">{{ $answer->created_at->diffForHumans() }}</p>
+                                                    <p class="link float--right"><a href="#">#{{ $topic_reply->id }}.{{ $answer->id }}</a></p>
+                                                </div>
+
+                                                <div class="body clearfix">
+                                                    <div class="author mr--20 float--left text-center">
+                                                        <div class="avatar" data-overlay="0.3" data-overlay-color="primary">
+                                                            <a href="#">
+                                                                <img src="{{ asset($answer->user->avatar) }}" alt="">
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="name text-darkest">
+                                                            <p><a href="#">{{ $answer->user->username }}</a></p>
+                                                        </div>
+
+                                                        <div class="role text-uppercase">
+                                                            <p class="text-white bg-primary">{{ $answer->user->job }}</p>
+                                                        </div>
+
+                                                        <div class="text-darkest">
+                                                            <a href="/answer/{{ $answer->id }}/like">
+                                                                {{ $answer->likes }} <i class="fa fa-thumbs-o-up"></i>
+                                                            </a> |
+                                                            <a href="/answer/{{ $answer->id }}/dislike">
+                                                                <i class="fa fa-thumbs-o-down"></i> {{ $answer->dislikes }}
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="content pt--20 fs--14 ov--h">
+                                                        <p>{{ $answer->answer }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
                                         <!-- Topic Reply End -->
+                                        @if(Auth::check())
+                                            <!-- Comment Form Start -->
+                                            <div class="comment--form pt--30" data-form="validate" style="display: none" id="{{ $topic_reply->id }}">
+                                                <h4 class="h4 pb--15">Bir cevap paylaş</h4>
+
+                                                <form action="/forum/{{ $forum->tag }}/{{ $subForum->tag }}/{{ $topic->tag }}/{{ $topic_reply->id }}/answer" method="POST">
+                                                    {{ csrf_field() }}
+                                                    <div class="row gutter--15">
+
+                                                        <div class="col-sm-12">
+                                                            <div class="form-group">
+                                                                <textarea name="answer" placeholder="Cevap *" class="form-control" required></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-12 pt--10">
+                                                            <button type="submit" class="btn btn-sm btn-primary fs--14">Paylaş</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- Comment Form End -->
+                                        @else
+                                            <div class="alert mt--30">
+                                                <div class="alert--inner ff--primary text-white bg-primary">
+                                                    <p>Cevap paylaşabilmek için giriş yapmış olmalısınız.</p>
+                                                </div>
+                                            </div>
+                                        @endif
                                     </li>
                                 @endforeach
                             </ul>
@@ -82,7 +152,7 @@
                     </div>
 
                     @if(Auth::check())
-                    <!-- Comment Form Start -->
+                        <!-- Comment Form Start -->
                         <div class="comment--form pt--30" data-form="validate">
                             <h4 class="h4 pb--15">Bir gönderi paylaş</h4>
 
@@ -116,5 +186,11 @@
         </div>
     </section>
     <!-- Page Wrapper End -->
+
+    <script type="text/javascript">
+        function asd(a) {
+            document.getElementById(a).style.display = "block";
+        }
+    </script>
 
 @endsection
