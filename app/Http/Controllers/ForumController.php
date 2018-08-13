@@ -5,10 +5,15 @@ namespace App\Http\Controllers;
 use App\Forum;
 use App\SubForum;
 use App\Topic;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ForumController extends Controller
 {
+    public function __construct()
+    {
+        Carbon::setLocale('tr');
+    }
     public function index()
     {
         $forums = Forum::all();
