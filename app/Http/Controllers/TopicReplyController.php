@@ -21,4 +21,20 @@ class TopicReplyController extends Controller
         ]);
         return back();
     }
+
+    public function like(TopicReply $topicReply)
+    {
+        $topicReply->likes = $topicReply->likes += 1;
+        $topicReply->save();
+
+        return back();
+    }
+
+    public function dislike(TopicReply $topicReply)
+    {
+        $topicReply->dislikes = $topicReply->dislikes += 1;
+        $topicReply->save();
+
+        return back();
+    }
 }

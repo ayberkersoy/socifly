@@ -55,6 +55,15 @@
                                                     <div class="role text-uppercase">
                                                         <p class="text-white bg-primary">{{ $topic_reply->user->job }}</p>
                                                     </div>
+
+                                                    <div class="text-darkest">
+                                                        <a href="/{{ $topic_reply->id }}/like">
+                                                            {{ $topic_reply->likes }} <i class="fa fa-thumbs-o-up"></i>
+                                                        </a> |
+                                                        <a href="/{{ $topic_reply->id }}/dislike">
+                                                            {{ $topic_reply->dislikes }} <i class="fa fa-thumbs-o-down"></i>
+                                                        </a>
+                                                    </div>
                                                 </div>
 
                                                 <div class="content pt--20 fs--14 ov--h">
