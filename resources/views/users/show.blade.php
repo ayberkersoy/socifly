@@ -1,7 +1,7 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: ayberk
- * Date: 13.08.2018
- * Time: 17:30
- */
+@extends('layouts.layout')
+
+@section('content')
+
+
+
+@endsection

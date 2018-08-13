@@ -25,6 +25,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'username';
+    }
+
     public function groups()
     {
         return $this->belongsToMany(Group::class);

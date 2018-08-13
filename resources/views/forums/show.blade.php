@@ -10,7 +10,7 @@
             </div>
 
             <ul class="breadcrumb text-gray ff--primary">
-                <li><a href="/" class="btn-link">Home</a></li>
+                <li><a href="/" class="btn-link">Anasayfa</a></li>
                 <li><a href="#" class="btn-link">Forum</a></li>
                 <li class="active"><span class="text-primary">{{ $forum->name }}</span></li>
             </ul>
