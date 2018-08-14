@@ -37,8 +37,8 @@
                                         <div class="topic--reply">
                                             <div class="header clearfix">
                                                 <p class="date float--left">{{ $topic_reply->created_at->diffForHumans() }}</p>
-                                                <p class="link float--right"><a href="#">#{{ $topic_reply->id }}</a></p>
-                                                <p class="link float--right mr--4"><a href="#" onclick="asd({{ $topic_reply->id }})">Cevapla</a></p>
+                                                <p class="link float--right"><a href="#">#{{ $loop->iteration }}</a></p>
+                                                <p class="float--right mr--4 text-white bg-primary"><a onclick="asd({{ $topic_reply->id }})" style="color:#fff; cursor: pointer;">CEVAPLA</a></p>
                                             </div>
 
                                             <div class="body clearfix">
@@ -68,50 +68,24 @@
                                                 </div>
 
                                                 <div class="content pt--20 fs--14 ov--h">
+                                                    @if($topic_reply->answers->count() > 0)
+                                                        @foreach($topic_reply->answers as $answer)
+                                                            <div class="table-bordered" style="padding: 8px; background-color: #ecf0f1;">
+                                                                <p>
+                                                                    {{ $answer->user->username }} dedi ki:
+                                                                </p>
+                                                                <p>
+                                                                    <i class="fa fa-quote-left"></i> {{ $answer->answer }} <i class="fa fa-quote-right"></i>
+                                                                </p>
+                                                            </div>
+
+                                                        @endforeach
+                                                    @endif
+
                                                     <p>{{ $topic_reply->reply }}</p>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        @foreach($topic_reply->answers as $answer)
-                                            <div class="topic--reply ml--70 pt--8">
-                                                <div class="header clearfix">
-                                                    <p class="date float--left">{{ $answer->created_at->diffForHumans() }}</p>
-                                                    <p class="link float--right"><a href="#">#{{ $topic_reply->id }}.{{ $answer->id }}</a></p>
-                                                </div>
-
-                                                <div class="body clearfix">
-                                                    <div class="author mr--20 float--left text-center">
-                                                        <div class="avatar" data-overlay="0.3" data-overlay-color="primary">
-                                                            <a href="#">
-                                                                <img src="{{ asset($answer->user->avatar) }}" alt="">
-                                                            </a>
-                                                        </div>
-
-                                                        <div class="name text-darkest">
-                                                            <p><a href="#">{{ $answer->user->username }}</a></p>
-                                                        </div>
-
-                                                        <div class="role text-uppercase">
-                                                            <p class="text-white bg-primary">{{ $answer->user->job }}</p>
-                                                        </div>
-
-                                                        <div class="text-darkest">
-                                                            <a href="/answer/{{ $answer->id }}/like">
-                                                                {{ $answer->likes }} <i class="fa fa-thumbs-o-up"></i>
-                                                            </a> |
-                                                            <a href="/answer/{{ $answer->id }}/dislike">
-                                                                <i class="fa fa-thumbs-o-down"></i> {{ $answer->dislikes }}
-                                                            </a>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="content pt--20 fs--14 ov--h">
-                                                        <p>{{ $answer->answer }}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
                                         <!-- Topic Reply End -->
                                         @if(Auth::check())
                                             <!-- Comment Form Start -->

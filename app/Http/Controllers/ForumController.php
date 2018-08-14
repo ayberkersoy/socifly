@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Answer;
 use App\Forum;
 use App\SubForum;
 use App\Topic;

@@ -13,13 +13,21 @@ class AnswerController extends Controller
 {
     public function store(Forum $forum, SubForum $subForum, Topic $topic, TopicReply $topicReply, Request $request)
     {
+        $topicAnswer = TopicReply::create([
+            'reply' => $request->answer,
+            'user_id' => auth()->id(),
+            'forum_id' => $forum->id,
+            'sub_forum_id' => $subForum->id,
+            'topic_id' => $topic->id
+        ]);
+
         Answer::create([
-            'answer' => $request->answer,
+            'answer' => $topicReply->reply,
             'user_id' => auth()->id(),
             'forum_id' => $forum->id,
             'sub_forum_id' => $subForum->id,
             'topic_id' => $topic->id,
-            'topic_reply_id' => $topicReply->id,
+            'topic_reply_id' => $topicAnswer->id,
         ]);
 
         return back();

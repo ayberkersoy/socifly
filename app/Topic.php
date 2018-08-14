@@ -32,4 +32,9 @@ class Topic extends Model
     {
         return $this->hasMany(TopicReply::class);
     }
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
 }
