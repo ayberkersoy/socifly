@@ -49,8 +49,8 @@
                             <ul class="nav ff--primary fs--14 fw--500 bg-lighter">
                                 <li><a href="/groups/{{ $group->tag }}">Anasayfa</a></li>
                                 <li><a href="/groups/{{ $group->tag }}/forum">Forum</a></li>
-                                <li class="active"><a href="/groups/{{ $group->tag }}/users">Üyeler</a></li>
-                                <li><a href="/groups/{{ $group->tag }}/events">Etkinlikler</a></li>
+                                <li><a href="/groups/{{ $group->tag }}/users">Üyeler</a></li>
+                                <li class="active"><a href="/groups/{{ $group->tag }}/events">Etkinlikler</a></li>
                                 @if(Auth::check())
                                     @if($group->users()->where('user_id', auth()->id())->exists())
 
@@ -70,42 +70,48 @@
                         <!-- Member Items Start -->
                         <div class="member--items">
                             <div class="row gutter--15 AdjustRow">
-                                @foreach($users as $user)
+                                @foreach($group->events as $event)
                                     <div class="col-md-3 col-xs-6 col-xxs-12">
-                                        <!-- Member Item Start -->
-                                        <div class="member--item">
-                                            <div class="img img-circle">
-                                                <a href="#" class="btn-link">
-                                                    <img src="{{ $user->avatar }}" alt="">
-                                                </a>
-                                            </div>
+                                        <!-- Box Item Start -->
+                                        <div class="box--item text-center">
+                                            <a href="/events/{{ $event->tag }}" class="img" data-overlay="0.1">
+                                                <img src="{{ asset($event->banner) }}" alt="">
+                                            </a>
 
-                                            <div class="name">
-                                                <h3 class="h6 fs--12">
-                                                    <a href="#" class="btn-link">{{ $user->name }} {{ $user->surname }}</a>
-                                                </h3>
-                                            </div>
+                                            <div class="info">
+                                                <div class="icon fs--18 text-lightest bg-primary">
+                                                    <i class="fa fa-eye"></i>
+                                                </div>
 
-                                            <div class="activity">
-                                                <p><i class="fa mr--8 fa-user"></i>{{ $user->username }}</p>
-                                                <p><i class="fa mr--8 fa-mail-forward"></i>{{ $user->email }}</p>
-                                                <p><i class="fa mr--8 fa-briefcase"></i>{{ $user->job }}</p>
+                                                <div class="title">
+                                                    <h2 class="h6"><a href="/events/{{ $event->tag }}">{{ $event->name }}</a></h2>
+                                                </div>
+
+                                                <div class="meta">
+                                                    <p><i class="fa mr--8 fa-calendar"></i>{{ $event->date }}</p>
+                                                    <p><i class="fa mr--8 fa-clock-o"></i>{{ $event->start_time }}</p>
+                                                    <p><i class="fa mr--8 fa-map-marker"></i>{{ $event->location }}</p>
+                                                </div>
+
+                                                <div class="action">
+                                                    <a href="/events/{{ $event->tag }}">Etkinlik Detay<i class="fa ml--10 fa-caret-right"></i></a>
+                                                </div>
                                             </div>
                                         </div>
-                                        <!-- Member Item End -->
+                                        <!-- Box Item End -->
                                     </div>
                                 @endforeach
                             </div>
                         </div>
                         <!-- Member Items End -->
 
-                        <!-- Page Count Start -->
-                        <div class="page--count pt--30">
-                            <label class="ff--primary fs--14 fw--500 text-darker">
-                                {{ $users->links() }}
-                            </label>
-                        </div>
-                        <!-- Page Count End -->
+                        {{--<!-- Page Count Start -->--}}
+                        {{--<div class="page--count pt--30">--}}
+                            {{--<label class="ff--primary fs--14 fw--500 text-darker">--}}
+                                {{--{{ $users->links() }}--}}
+                            {{--</label>--}}
+                        {{--</div>--}}
+                        {{--<!-- Page Count End -->--}}
                     </div>
                 </div>
                 <!-- Main Content End -->

@@ -32,4 +32,9 @@ class Group extends Model
     {
         return $this->hasMany(Forum::class);
     }
+
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
 }

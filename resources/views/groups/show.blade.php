@@ -50,6 +50,7 @@
                                 <li class="active"><a href="#">Anasayfa</a></li>
                                 <li><a href="/groups/{{ $group->tag }}/forum">Forum</a></li>
                                 <li><a href="/groups/{{ $group->tag }}/users">Üyeler</a></li>
+                                <li><a href="/groups/{{ $group->tag }}/events">Etkinlikler</a></li>
                                 @if(Auth::check())
                                     @if($group->users()->where('user_id', auth()->id())->exists())
 

@@ -40,4 +40,9 @@ class GroupController extends Controller
         $group->users()->attach(auth()->id());
         return back();
     }
+
+    public function eventsIndex(Group $group)
+    {
+        return view('groups.group-events', compact('group'));
+    }
 }
