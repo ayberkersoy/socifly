@@ -56,6 +56,20 @@
                                                 <p><i class="fa mr--8 fa-mail-forward"></i>{{ $user->email }}</p>
                                                 <p><i class="fa mr--8 fa-briefcase"></i>{{ $user->job }}</p>
                                             </div>
+                                            @if($user->groups->count() > 0)
+                                                Dahil olduğu gruplar;
+                                                <div class="cover--user-desc">
+                                                    <p>
+                                                        @foreach($user->groups as $group)
+                                                            @if($loop->last)
+                                                                <a href="/groups/{{ $group->tag }}">{{ $group->name }}</a>
+                                                            @else
+                                                                <a href="/groups/{{ $group->tag }}">{{ $group->name }},</a>
+                                                            @endif
+                                                        @endforeach
+                                                    </p>
+                                                </div>
+                                            @endif
                                         </div>
                                         <!-- Member Item End -->
                                     </div>
