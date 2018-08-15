@@ -25,116 +25,7 @@
 <section class="banner--section">
 
     <div id='map'></div>
-    <img src="" class="img-">
 
-    <!-- Banner Slider Start -->
-    {{--<div class="banner--slider owl-carousel" data-owl-dots="true" data-owl-dots-style="2">--}}
-        {{--<!-- Banner Item Start -->--}}
-        {{--<div class="banner--item" data-bg-img="img/banner-img/home-version-1/slider-bg-01.jpg" data-overlay="0.75">--}}
-            {{--<div class="vc--parent">--}}
-                {{--<div class="vc--child">--}}
-                    {{--<div class="container">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-md-12">--}}
-                                {{--<!-- Banner Content Start -->--}}
-                                {{--<div class="banner--content pt--70 pb--80 text-center">--}}
-                                    {{--<div class="title">--}}
-                                        {{--<h1 class="h1 text-lightgray">Welcome To Community</h1>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="sub-title">--}}
-                                        {{--<h2 class="h2 text-lightgray">Connect, Share &amp; Engage</h2>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="desc text-gray fs--16">--}}
-                                        {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="action text-uppercase">--}}
-                                        {{--<a href="#" class="btn btn-white">Learn More</a>--}}
-                                        {{--<a href="#" class="btn btn-primary">See Members</a>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<!-- Banner Content End -->--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<!-- Banner Item End -->--}}
-
-        {{--<!-- Banner Item Start -->--}}
-        {{--<div class="banner--item" data-bg-img="img/banner-img/home-version-1/slider-bg-02.jpg" data-overlay="0.75">--}}
-            {{--<div class="vc--parent">--}}
-                {{--<div class="vc--child">--}}
-                    {{--<div class="container">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-md-10 col-md-offset-1">--}}
-                                {{--<!-- Banner Content Start -->--}}
-                                {{--<div class="banner--content pt--70 pb--80 text-center">--}}
-                                    {{--<div class="title">--}}
-                                        {{--<h1 class="h1 text-lightgray">Welcome To Community</h1>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="sub-title">--}}
-                                        {{--<h2 class="h2 text-lightgray">Connect, Share &amp; Engage</h2>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="desc text-gray fs--16">--}}
-                                        {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="action text-uppercase">--}}
-                                        {{--<a href="#" class="btn btn-white">Learn More</a>--}}
-                                        {{--<a href="#" class="btn btn-primary">See Members</a>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<!-- Banner Content End -->--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<!-- Banner Item End -->--}}
-
-        {{--<!-- Banner Item Start -->--}}
-        {{--<div class="banner--item" data-bg-img="img/banner-img/home-version-1/slider-bg-03.jpg" data-overlay="0.75">--}}
-            {{--<div class="vc--parent">--}}
-                {{--<div class="vc--child">--}}
-                    {{--<div class="container">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-md-10 col-md-offset-1">--}}
-                                {{--<!-- Banner Content Start -->--}}
-                                {{--<div class="banner--content pt--70 pb--80 text-center">--}}
-                                    {{--<div class="title">--}}
-                                        {{--<h1 class="h1 text-lightgray">Welcome To Community</h1>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="sub-title">--}}
-                                        {{--<h2 class="h2 text-lightgray">Connect, Share &amp; Engage</h2>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="desc text-gray fs--16">--}}
-                                        {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="action text-uppercase">--}}
-                                        {{--<a href="#" class="btn btn-white">Learn More</a>--}}
-                                        {{--<a href="#" class="btn btn-primary">See Members</a>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<!-- Banner Content End -->--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<!-- Banner Item End -->--}}
-    {{--</div>--}}
-    <!-- Banner Slider End -->
 </section>
 <!-- Banner Section End -->
 
@@ -146,11 +37,11 @@
                 <!-- Feature Item Start -->
                 <div class="feature--item bg-default text-center">
                     <div class="title">
-                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">530</span>k+</h2>
+                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">{{ \App\User::count() }}</span></h2>
                     </div>
 
                     <div class="sub-title">
-                        <h3 class="h2 fs--16">Stories / Topics Created</h3>
+                        <h3 class="h2 fs--16">Üye</h3>
                     </div>
 
                     <div class="desc">
@@ -164,11 +55,11 @@
                 <!-- Feature Item Start -->
                 <div class="feature--item bg-default text-center">
                     <div class="title">
-                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">30</span>k+</h2>
+                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">{{ \App\Event::count() }}</span></h2>
                     </div>
 
                     <div class="sub-title">
-                        <h3 class="h2 fs--16">Member Online Right Now</h3>
+                        <h3 class="h2 fs--16">Etkinlik</h3>
                     </div>
 
                     <div class="desc">
@@ -182,11 +73,11 @@
                 <!-- Feature Item Start -->
                 <div class="feature--item bg-default text-center">
                     <div class="title">
-                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">1.5</span>k+</h2>
+                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">{{ \App\Forum::count() }}</span></h2>
                     </div>
 
                     <div class="sub-title">
-                        <h3 class="h2 fs--16">Active Group / Meeting Room</h3>
+                        <h3 class="h2 fs--16">Forum Başlığı</h3>
                     </div>
 
                     <div class="desc">
@@ -200,11 +91,11 @@
                 <!-- Feature Item Start -->
                 <div class="feature--item bg-default text-center">
                     <div class="title">
-                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">03</span>k+</h2>
+                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">{{ \App\Group::count() }}</span></h2>
                     </div>
 
                     <div class="sub-title">
-                        <h3 class="h2 fs--16">New Event In Every Week</h3>
+                        <h3 class="h2 fs--16">Grup</h3>
                     </div>
 
                     <div class="desc">
@@ -224,7 +115,7 @@
         <!-- Section Title Start -->
         <div class="section--title pb--50 text-center">
             <div class="title">
-                <h2 class="h2">How It Works?</h2>
+                <h2 class="h2">Nasıl Çalışır?</h2>
             </div>
 
             <div class="sub-title">
@@ -265,7 +156,7 @@
 
                         <div class="info">
                             <div class="title">
-                                <h3 class="h4 fw--700">Create An Account</h3>
+                                <h3 class="h4 fw--700">Hesap Oluşturun</h3>
                             </div>
 
                             <div class="desc">
@@ -283,7 +174,7 @@
 
                         <div class="info">
                             <div class="title">
-                                <h3 class="h4 fw--700">Add Friends &amp; Groups</h3>
+                                <h3 class="h4 fw--700">Gruplara Katılın</h3>
                             </div>
 
                             <div class="desc">
@@ -301,7 +192,7 @@
 
                         <div class="info">
                             <div class="title">
-                                <h3 class="h4 fw--700">Start Discussion</h3>
+                                <h3 class="h4 fw--700">Bir Tartışma Başlatın</h3>
                             </div>
 
                             <div class="desc">
@@ -319,7 +210,7 @@
 
                         <div class="info">
                             <div class="title">
-                                <h3 class="h4 fw--700">Share With Friends</h3>
+                                <h3 class="h4 fw--700">Etkinliklere Katılın</h3>
                             </div>
 
                             <div class="desc">
@@ -341,14 +232,14 @@
     <div class="container">
         <!-- Box Nav Start -->
         <div class="box--nav clearfix">
-            <h2 class="h2 fw--600 float--left">Most Popular Groups</h2>
+            <h2 class="h2 fw--600 float--left">Gruplar</h2>
 
-            <ul class="nav ff--primary float--right">
-                <li class="active"><a href="#boxItemsTab01" class="btn btn-default" data-toggle="tab">Newest</a></li>
-                <li><a href="#boxItemsTab02" class="btn btn-default" data-toggle="tab">Active</a></li>
-                <li><a href="#boxItemsTab03" class="btn btn-default" data-toggle="tab">Popular</a></li>
-                <li><a href="#boxItemsTab04" class="btn btn-default" data-toggle="tab">Alphabetic</a></li>
-            </ul>
+            {{--<ul class="nav ff--primary float--right">--}}
+                {{--<li class="active"><a href="#boxItemsTab01" class="btn btn-default" data-toggle="tab">Newest</a></li>--}}
+                {{--<li><a href="#boxItemsTab02" class="btn btn-default" data-toggle="tab">Active</a></li>--}}
+                {{--<li><a href="#boxItemsTab03" class="btn btn-default" data-toggle="tab">Popular</a></li>--}}
+                {{--<li><a href="#boxItemsTab04" class="btn btn-default" data-toggle="tab">Alphabetic</a></li>--}}
+            {{--</ul>--}}
         </div>
         <!-- Box Nav End -->
 
@@ -358,191 +249,38 @@
             <div class="tab-pane fade in active" id="boxItemsTab01">
                 <!-- Box Items Start -->
                 <div class="box--items owl-carousel" data-owl-items="4" data-owl-margin="30" data-owl-autoplay="false" data-owl-responsive='{"0": {"items": "1"}, "481": {"items": "2"}, "768": {"items": "3"}, "992": {"items": "4"}}'>
-                    <!-- Box Item Start -->
-                    <div class="box--item text-center">
-                        <a href="group-home.html" class="img" data-overlay="0.1">
-                            <img src="img/group-img/01.jpg" alt="">
-                        </a>
+                    @foreach(\App\Group::all() as $group)
+                        <!-- Box Item Start -->
+                        <div class="box--item text-center">
+                            <a href="/groups/{{ $group->tag }}" class="img" data-overlay="0.1">
+                                <img src="{{ $group->banner }}" alt="">
+                            </a>
 
-                        <div class="info">
-                            <div class="icon fs--18 text-lightest bg-primary">
-                                <i class="fa fa-plane"></i>
-                            </div>
+                            <div class="info">
+                                <div class="icon fs--18 text-lightest bg-primary">
+                                    <i class="fa fa-eye"></i>
+                                </div>
 
-                            <div class="title">
-                                <h2 class="h6"><a href="group-home.html">Travel ( Just Take A Tour )</a></h2>
-                            </div>
+                                <div class="title">
+                                    <h2 class="h6"><a href="/groups/{{ $group->tag }}">{{ $group->name }}</a></h2>
+                                </div>
 
-                            <div class="meta">
-                                <p><i class="fa mr--8 fa-clock-o"></i>Active 8 days ago</p>
-                                <p><i class="fa mr--8 fa-user-o"></i>Public Group / 2500 Members</p>
-                            </div>
+                                <div class="meta">
+                                    <p><i class="fa mr--8 fa-clock-o"></i>{{ $group->created_at->diffForHumans() }}</p>
+                                    <p><i class="fa mr--8 fa-user-o"></i>{{ $group->users->count() }} Kişi</p>
+                                </div>
 
-                            <div class="desc text-darker">
-                                <p>Lorem Ipsum is simply dummy text of the printing &amp; typesetting.</p>
-                            </div>
+                                <div class="desc text-darker">
+                                    <p>{{ $group->description }}</p>
+                                </div>
 
-                            <div class="action">
-                                <a href="group-home.html">Group Details<i class="fa ml--10 fa-caret-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Box Item End -->
-
-                    <!-- Box Item Start -->
-                    <div class="box--item text-center">
-                        <a href="group-home.html" class="img" data-overlay="0.1">
-                            <img src="img/group-img/02.jpg" alt="">
-                        </a>
-
-                        <div class="info">
-                            <div class="icon fs--18 text-lightest bg-primary">
-                                <i class="fa fa-music"></i>
-                            </div>
-
-                            <div class="title">
-                                <h2 class="h6"><a href="group-home.html">Music Lover ( Injoy Yourself )</a></h2>
-                            </div>
-
-                            <div class="meta">
-                                <p><i class="fa mr--8 fa-clock-o"></i>Active 8 days ago</p>
-                                <p><i class="fa mr--8 fa-user-o"></i>Public Group / 2500 Members</p>
-                            </div>
-
-                            <div class="desc text-darker">
-                                <p>Lorem Ipsum is simply dummy text of the printing &amp; typesetting.</p>
-                            </div>
-
-                            <div class="action">
-                                <a href="group-home.html">Group Details<i class="fa ml--10 fa-caret-right"></i></a>
+                                <div class="action">
+                                    <a href="/groups/{{ $group->tag }}">Grup Detay<i class="fa ml--10 fa-caret-right"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Box Item End -->
-
-                    <!-- Box Item Start -->
-                    <div class="box--item text-center">
-                        <a href="group-home.html" class="img" data-overlay="0.1">
-                            <img src="img/group-img/03.jpg" alt="">
-                        </a>
-
-                        <div class="info">
-                            <div class="icon fs--18 text-lightest bg-primary">
-                                <i class="fa fa-camera"></i>
-                            </div>
-
-                            <div class="title">
-                                <h2 class="h6"><a href="group-home.html">Photography ( Memories )</a></h2>
-                            </div>
-
-                            <div class="meta">
-                                <p><i class="fa mr--8 fa-clock-o"></i>Active 8 days ago</p>
-                                <p><i class="fa mr--8 fa-user-o"></i>Public Group / 2500 Members</p>
-                            </div>
-
-                            <div class="desc text-darker">
-                                <p>Lorem Ipsum is simply dummy text of the printing &amp; typesetting.</p>
-                            </div>
-
-                            <div class="action">
-                                <a href="group-home.html">Group Details<i class="fa ml--10 fa-caret-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Box Item End -->
-
-                    <!-- Box Item Start -->
-                    <div class="box--item text-center">
-                        <a href="group-home.html" class="img" data-overlay="0.1">
-                            <img src="img/group-img/04.jpg" alt="">
-                        </a>
-
-                        <div class="info">
-                            <div class="icon fs--18 text-lightest bg-primary">
-                                <i class="fa fa-paw"></i>
-                            </div>
-
-                            <div class="title">
-                                <h2 class="h6"><a href="group-home.html">Tasty Food Recipes</a></h2>
-                            </div>
-
-                            <div class="meta">
-                                <p><i class="fa mr--8 fa-clock-o"></i>Active 8 days ago</p>
-                                <p><i class="fa mr--8 fa-user-o"></i>Public Group / 2500 Members</p>
-                            </div>
-
-                            <div class="desc text-darker">
-                                <p>Lorem Ipsum is simply dummy text of the printing &amp; typesetting.</p>
-                            </div>
-
-                            <div class="action">
-                                <a href="group-home.html">Group Details<i class="fa ml--10 fa-caret-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Box Item End -->
-
-                    <!-- Box Item Start -->
-                    <div class="box--item text-center">
-                        <a href="group-home.html" class="img" data-overlay="0.1">
-                            <img src="img/group-img/05.jpg" alt="">
-                        </a>
-
-                        <div class="info">
-                            <div class="icon fs--18 text-lightest bg-primary">
-                                <i class="fa fa-laptop"></i>
-                            </div>
-
-                            <div class="title">
-                                <h2 class="h6"><a href="group-home.html">Pet Care ( Passionately )</a></h2>
-                            </div>
-
-                            <div class="meta">
-                                <p><i class="fa mr--8 fa-clock-o"></i>Active 8 days ago</p>
-                                <p><i class="fa mr--8 fa-user-o"></i>Public Group / 2500 Members</p>
-                            </div>
-
-                            <div class="desc text-darker">
-                                <p>Lorem Ipsum is simply dummy text of the printing &amp; typesetting.</p>
-                            </div>
-
-                            <div class="action">
-                                <a href="group-home.html">Group Details<i class="fa ml--10 fa-caret-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Box Item End -->
-
-                    <!-- Box Item Start -->
-                    <div class="box--item text-center">
-                        <a href="group-home.html" class="img" data-overlay="0.1">
-                            <img src="img/group-img/06.jpg" alt="">
-                        </a>
-
-                        <div class="info">
-                            <div class="icon fs--18 text-lightest bg-primary">
-                                <i class="fa fa-cutlery"></i>
-                            </div>
-
-                            <div class="title">
-                                <h2 class="h6"><a href="group-home.html">Technology</a></h2>
-                            </div>
-
-                            <div class="meta">
-                                <p><i class="fa mr--8 fa-clock-o"></i>Active 8 days ago</p>
-                                <p><i class="fa mr--8 fa-user-o"></i>Public Group / 2500 Members</p>
-                            </div>
-
-                            <div class="desc text-darker">
-                                <p>Lorem Ipsum is simply dummy text of the printing &amp; typesetting.</p>
-                            </div>
-
-                            <div class="action">
-                                <a href="group-home.html">Group Details<i class="fa ml--10 fa-caret-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Box Item End -->
+                        <!-- Box Item End -->
+                    @endforeach
                 </div>
                 <!-- Box Items End -->
 
@@ -552,7 +290,7 @@
                         <i class="fa fa-caret-left"></i>
                     </a>
 
-                    <a href="groups.html" class="btn ff--primary fw--500 btn-default">View All Groups</a>
+                    <a href="/groups" class="btn ff--primary fw--500 btn-default">Bütün Gruplar</a>
 
                     <a href="#" class="btn fs--16 btn-default" data-action="next">
                         <i class="fa fa-caret-right"></i>
@@ -1195,458 +933,49 @@
 <section class="section pt--70 pb--20">
     <div class="container">
         <div class="row">
-            <div class="col-md-7 pb--60">
+            <div class="col-md-12 pb--60">
                 <!-- Section Title Start -->
                 <div class="section--title pb--20">
                     <div class="title">
-                        <h2 class="h2">Most Popular Members</h2>
+                        <h2 class="h2">Üyeler</h2>
                     </div>
                 </div>
                 <!-- Section Title End -->
 
                 <!-- Member Slider Start -->
-                <div class="member--slider owl-carousel" data-owl-items="4" data-owl-autoplay="false" data-bg-img="img/members-img/pattern-bg.png" data-owl-nav="true" data-owl-center="true" data-owl-responsive='{"0": {"items": "1"}, "486": {"items": "3"}, "992": {"items": "4"}}'>
-                    <!-- Member Item Start -->
-                    <div class="member--item online">
-                        <div class="vc--parent">
-                            <div class="vc--child">
-                                <div class="img img-circle">
-                                    <a href="member-activity-personal.html" class="btn-link">
-                                        <img src="img/members-img/member-01.jpg" alt="">
-                                    </a>
-                                </div>
+                <div class="member--slider owl-carousel" data-owl-items="{{ \App\User::count() }}" data-owl-autoplay="false" data-bg-img="img/members-img/pattern-bg.png" data-owl-nav="true" data-owl-center="true" data-owl-responsive='{"0": {"items": "1"}, "486": {"items": "{{ \App\User::count() }}"}, "992": {"items": "{{ \App\User::count() }}"}}'>
+                    @foreach(\App\User::all() as $user)
+                        <!-- Member Item Start -->
+                        <div class="member--item online">
+                            <div class="vc--parent">
+                                <div class="vc--child">
+                                    <div class="img img-circle">
+                                        <a href="#" class="btn-link">
+                                            <img src="{{ $user->avatar }}" alt="">
+                                        </a>
+                                    </div>
 
-                                <div class="name">
-                                    <h3 class="h6 fs--12">
-                                        <a href="member-activity-personal.html" class="btn-link">Rosa R. Secor</a>
-                                    </h3>
-                                </div>
+                                    <div class="name">
+                                        <h3 class="h6 fs--12">
+                                            <a href="#" class="btn-link">{{ $user->name }} {{ $user->surname }}</a>
+                                        </h3>
+                                    </div>
 
-                                <div class="activity">
-                                    <p><i class="fa mr--8 fa-clock-o"></i>Active 5 monts ago</p>
-                                </div>
-
-                                <div class="actions">
-                                    <ul class="nav">
-                                        <li>
-                                            <a href="#" title="Send Message" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Add Friend" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-user-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Media" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-folder-o"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <div class="activity">
+                                        <p><i class="fa mr--8 fa-clock-o"></i>{{ $user->created_at->diffForHumans() }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Member Item End -->
-
-                    <!-- Member Item Start -->
-                    <div class="member--item">
-                        <div class="vc--parent">
-                            <div class="vc--child">
-                                <div class="img img-circle">
-                                    <a href="member-activity-personal.html" class="btn-link">
-                                        <img src="img/members-img/member-02.jpg" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="name">
-                                    <h3 class="h6 fs--12">
-                                        <a href="member-activity-personal.html" class="btn-link">Juan Bishop</a>
-                                    </h3>
-                                </div>
-
-                                <div class="activity">
-                                    <p><i class="fa mr--8 fa-clock-o"></i>Active 5 monts ago</p>
-                                </div>
-
-                                <div class="actions">
-                                    <ul class="nav">
-                                        <li>
-                                            <a href="#" title="Send Message" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Add Friend" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-user-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Media" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-folder-o"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Member Item End -->
-
-                    <!-- Member Item Start -->
-                    <div class="member--item online">
-                        <div class="vc--parent">
-                            <div class="vc--child">
-                                <div class="img img-circle">
-                                    <a href="member-activity-personal.html" class="btn-link">
-                                        <img src="img/members-img/member-03.jpg" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="name">
-                                    <h3 class="h6 fs--12">
-                                        <a href="member-activity-personal.html" class="btn-link">Kelly Salazar</a>
-                                    </h3>
-                                </div>
-
-                                <div class="activity">
-                                    <p><i class="fa mr--8 fa-clock-o"></i>Active 5 monts ago</p>
-                                </div>
-
-                                <div class="actions">
-                                    <ul class="nav">
-                                        <li>
-                                            <a href="#" title="Send Message" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Add Friend" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-user-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Media" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-folder-o"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Member Item End -->
-
-                    <!-- Member Item Start -->
-                    <div class="member--item online">
-                        <div class="vc--parent">
-                            <div class="vc--child">
-                                <div class="img img-circle">
-                                    <a href="member-activity-personal.html" class="btn-link">
-                                        <img src="img/members-img/member-04.jpg" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="name">
-                                    <h3 class="h6 fs--12">
-                                        <a href="member-activity-personal.html" class="btn-link">Gregory L. Caudill</a>
-                                    </h3>
-                                </div>
-
-                                <div class="activity">
-                                    <p><i class="fa mr--8 fa-clock-o"></i>Active 5 monts ago</p>
-                                </div>
-
-                                <div class="actions">
-                                    <ul class="nav">
-                                        <li>
-                                            <a href="#" title="Send Message" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Add Friend" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-user-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Media" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-folder-o"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Member Item End -->
-
-                    <!-- Member Item Start -->
-                    <div class="member--item">
-                        <div class="vc--parent">
-                            <div class="vc--child">
-                                <div class="img img-circle">
-                                    <a href="member-activity-personal.html" class="btn-link">
-                                        <img src="img/members-img/member-05.jpg" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="name">
-                                    <h3 class="h6 fs--12">
-                                        <a href="member-activity-personal.html" class="btn-link">William P. Waite</a>
-                                    </h3>
-                                </div>
-
-                                <div class="activity">
-                                    <p><i class="fa mr--8 fa-clock-o"></i>Active 5 monts ago</p>
-                                </div>
-
-                                <div class="actions">
-                                    <ul class="nav">
-                                        <li>
-                                            <a href="#" title="Send Message" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Add Friend" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-user-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Media" class="btn-link" data-toggle="tooltip" data-placement="bottom">
-                                                <i class="fa fa-folder-o"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Member Item End -->
+                        <!-- Member Item End -->
+                    @endforeach
                 </div>
                 <!-- Member Slider End -->
-            </div>
-
-            <div class="col-md-5 pb--60">
-                <!-- Section Title Start -->
-                <div class="section--title pb--20">
-                    <div class="title">
-                        <h2 class="h2">Show Some Sweet Love</h2>
-                    </div>
-                </div>
-                <!-- Section Title End -->
-
-                <!-- Testimonial Items Start -->
-                <div class="testimonial--items owl-carousel" data-owl-dots="true" data-owl-margin="10" data-owl-autoplay="false" data-owl-animate="fadeOut">
-                    <!-- Testimonial Item Start -->
-                    <div class="testimonial--item clearfix">
-                        <div class="img mr--20 float--left">
-                            <img src="img/testimonial-img/01.jpg" alt="">
-                        </div>
-
-                        <div class="info">
-                            <blockquote class="fs--12">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ever.</p>
-                            </blockquote>
-
-                            <div class="name">
-                                <h3 class="h6 fs--12">Philip K. Rice &amp; Nina B. Bandy</h3>
-                            </div>
-
-                            <div class="rating">
-                                <ul class="nav">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star-o"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item End -->
-
-                    <!-- Testimonial Item Start -->
-                    <div class="testimonial--item clearfix">
-                        <div class="img mr--20 float--left">
-                            <img src="img/testimonial-img/02.jpg" alt="">
-                        </div>
-
-                        <div class="info">
-                            <blockquote class="fs--12">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ever.</p>
-                            </blockquote>
-
-                            <div class="name">
-                                <h3 class="h6 fs--12">Philip K. Rice &amp; Nina B. Bandy</h3>
-                            </div>
-
-                            <div class="rating">
-                                <ul class="nav">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star-o"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item End -->
-
-                    <!-- Testimonial Item Start -->
-                    <div class="testimonial--item clearfix">
-                        <div class="img mr--20 float--left">
-                            <img src="img/testimonial-img/03.jpg" alt="">
-                        </div>
-
-                        <div class="info">
-                            <blockquote class="fs--12">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ever.</p>
-                            </blockquote>
-
-                            <div class="name">
-                                <h3 class="h6 fs--12">Philip K. Rice &amp; Nina B. Bandy</h3>
-                            </div>
-
-                            <div class="rating">
-                                <ul class="nav">
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star-o"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item End -->
-                </div>
-                <!-- Testimonial Items End -->
             </div>
         </div>
     </div>
 </section>
 <!-- Members and Testimonial Section End -->
-
-<!-- Why Choose Us Section Start -->
-<section class="section bg-lighter pt--80 pb--20">
-    <div class="container">
-        <div class="row row--md-vc">
-            <div class="col-md-6 pb--50">
-                <!-- Text Block Start -->
-                <div class="text--block pb--10">
-                    <div class="title">
-                        <h2 class="h2 fw--600">Why Choose Us?</h2>
-                    </div>
-
-                    <div class="content fs--14">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. make a type specimen book.</p>
-                    </div>
-                </div>
-                <!-- Text Block End -->
-
-                <div class="row AdjustRow">
-                    <div class="col-xs-6 col-xxs-12 pb--10">
-                        <!-- Feature Block Start -->
-                        <div class="feature--block mb--6 clearfix">
-                            <div class="icon fs--18 text-primary mr--20 float--left">
-                                <i class="fa fa-comments-o"></i>
-                            </div>
-
-                            <div class="info ov--h">
-                                <div class="title">
-                                    <h2 class="h6 fw--700">Individual Live Chat</h2>
-                                </div>
-
-                                <div class="desc mt--8">
-                                    <p>Ipsum is simply dummy text of the printing industry.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Feature Block End -->
-                    </div>
-
-                    <div class="col-xs-6 col-xxs-12 pb--10">
-                        <!-- Feature Block Start -->
-                        <div class="feature--block mb--6 clearfix">
-                            <div class="icon fs--18 text-primary mr--20 float--left">
-                                <i class="fa fa-wrench"></i>
-                            </div>
-
-                            <div class="info ov--h">
-                                <div class="title">
-                                    <h2 class="h6 fw--700">User Friendly Settings</h2>
-                                </div>
-
-                                <div class="desc mt--8">
-                                    <p>Ipsum is simply dummy text of the printing industry.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Feature Block End -->
-                    </div>
-
-                    <div class="col-xs-6 col-xxs-12 pb--10">
-                        <!-- Feature Block Start -->
-                        <div class="feature--block mb--6 clearfix">
-                            <div class="icon fs--18 text-primary mr--20 float--left">
-                                <i class="fa fa-group"></i>
-                            </div>
-
-                            <div class="info ov--h">
-                                <div class="title">
-                                    <h2 class="h6 fw--700">Discover Amazing People</h2>
-                                </div>
-
-                                <div class="desc mt--8">
-                                    <p>Ipsum is simply dummy text of the printing industry.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Feature Block End -->
-                    </div>
-
-                    <div class="col-xs-6 col-xxs-12 pb--10">
-                        <!-- Feature Block Start -->
-                        <div class="feature--block mb--6 clearfix">
-                            <div class="icon fs--18 text-primary mr--20 float--left">
-                                <i class="fa fa-clock-o"></i>
-                            </div>
-
-                            <div class="info ov--h">
-                                <div class="title">
-                                    <h2 class="h6 fw--700">Times Fly With Us</h2>
-                                </div>
-
-                                <div class="desc mt--8">
-                                    <p>Ipsum is simply dummy text of the printing industry.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Feature Block End -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 pb--60">
-                <!-- Video Popup Start -->
-                <div class="video--popup style--1" data-overlay="0.3">
-                    <img src="img/why-choose-us-img/video-poster-1.jpg" alt="">
-
-                    <a href="https://www.youtube.com/watch?v=YE7VzlLtp-4" class="btn-link" data-trigger="video_popup">
-                        <span><i class="fa fa-play"></i></span>
-                    </a>
-                </div>
-                <!-- Video Popup End -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Why Choose Us Section End -->
-<img src="" class="img--embed-full">
 @endsection
 
 @section('js')
