@@ -1,116 +1,139 @@
 @extends('layouts.layout')
 
+@section('css')
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        #map {
+            width: 100%;
+            height: 570px;
+        }
+    </style>
+
+@endsection
+
 @section('content')
 
 <!-- Banner Section Start -->
 <section class="banner--section">
+
+    <div id='map'></div>
+    <img src="" class="img-">
+
     <!-- Banner Slider Start -->
-    <div class="banner--slider owl-carousel" data-owl-dots="true" data-owl-dots-style="2">
-        <!-- Banner Item Start -->
-        <div class="banner--item" data-bg-img="img/banner-img/home-version-1/slider-bg-01.jpg" data-overlay="0.75">
-            <div class="vc--parent">
-                <div class="vc--child">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <!-- Banner Content Start -->
-                                <div class="banner--content pt--70 pb--80 text-center">
-                                    <div class="title">
-                                        <h1 class="h1 text-lightgray">Welcome To Community</h1>
-                                    </div>
+    {{--<div class="banner--slider owl-carousel" data-owl-dots="true" data-owl-dots-style="2">--}}
+        {{--<!-- Banner Item Start -->--}}
+        {{--<div class="banner--item" data-bg-img="img/banner-img/home-version-1/slider-bg-01.jpg" data-overlay="0.75">--}}
+            {{--<div class="vc--parent">--}}
+                {{--<div class="vc--child">--}}
+                    {{--<div class="container">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-12">--}}
+                                {{--<!-- Banner Content Start -->--}}
+                                {{--<div class="banner--content pt--70 pb--80 text-center">--}}
+                                    {{--<div class="title">--}}
+                                        {{--<h1 class="h1 text-lightgray">Welcome To Community</h1>--}}
+                                    {{--</div>--}}
 
-                                    <div class="sub-title">
-                                        <h2 class="h2 text-lightgray">Connect, Share &amp; Engage</h2>
-                                    </div>
+                                    {{--<div class="sub-title">--}}
+                                        {{--<h2 class="h2 text-lightgray">Connect, Share &amp; Engage</h2>--}}
+                                    {{--</div>--}}
 
-                                    <div class="desc text-gray fs--16">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                                    </div>
+                                    {{--<div class="desc text-gray fs--16">--}}
+                                        {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>--}}
+                                    {{--</div>--}}
 
-                                    <div class="action text-uppercase">
-                                        <a href="#" class="btn btn-white">Learn More</a>
-                                        <a href="#" class="btn btn-primary">See Members</a>
-                                    </div>
-                                </div>
-                                <!-- Banner Content End -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Banner Item End -->
+                                    {{--<div class="action text-uppercase">--}}
+                                        {{--<a href="#" class="btn btn-white">Learn More</a>--}}
+                                        {{--<a href="#" class="btn btn-primary">See Members</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- Banner Content End -->--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<!-- Banner Item End -->--}}
 
-        <!-- Banner Item Start -->
-        <div class="banner--item" data-bg-img="img/banner-img/home-version-1/slider-bg-02.jpg" data-overlay="0.75">
-            <div class="vc--parent">
-                <div class="vc--child">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <!-- Banner Content Start -->
-                                <div class="banner--content pt--70 pb--80 text-center">
-                                    <div class="title">
-                                        <h1 class="h1 text-lightgray">Welcome To Community</h1>
-                                    </div>
+        {{--<!-- Banner Item Start -->--}}
+        {{--<div class="banner--item" data-bg-img="img/banner-img/home-version-1/slider-bg-02.jpg" data-overlay="0.75">--}}
+            {{--<div class="vc--parent">--}}
+                {{--<div class="vc--child">--}}
+                    {{--<div class="container">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-10 col-md-offset-1">--}}
+                                {{--<!-- Banner Content Start -->--}}
+                                {{--<div class="banner--content pt--70 pb--80 text-center">--}}
+                                    {{--<div class="title">--}}
+                                        {{--<h1 class="h1 text-lightgray">Welcome To Community</h1>--}}
+                                    {{--</div>--}}
 
-                                    <div class="sub-title">
-                                        <h2 class="h2 text-lightgray">Connect, Share &amp; Engage</h2>
-                                    </div>
+                                    {{--<div class="sub-title">--}}
+                                        {{--<h2 class="h2 text-lightgray">Connect, Share &amp; Engage</h2>--}}
+                                    {{--</div>--}}
 
-                                    <div class="desc text-gray fs--16">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                                    </div>
+                                    {{--<div class="desc text-gray fs--16">--}}
+                                        {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>--}}
+                                    {{--</div>--}}
 
-                                    <div class="action text-uppercase">
-                                        <a href="#" class="btn btn-white">Learn More</a>
-                                        <a href="#" class="btn btn-primary">See Members</a>
-                                    </div>
-                                </div>
-                                <!-- Banner Content End -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Banner Item End -->
+                                    {{--<div class="action text-uppercase">--}}
+                                        {{--<a href="#" class="btn btn-white">Learn More</a>--}}
+                                        {{--<a href="#" class="btn btn-primary">See Members</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- Banner Content End -->--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<!-- Banner Item End -->--}}
 
-        <!-- Banner Item Start -->
-        <div class="banner--item" data-bg-img="img/banner-img/home-version-1/slider-bg-03.jpg" data-overlay="0.75">
-            <div class="vc--parent">
-                <div class="vc--child">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <!-- Banner Content Start -->
-                                <div class="banner--content pt--70 pb--80 text-center">
-                                    <div class="title">
-                                        <h1 class="h1 text-lightgray">Welcome To Community</h1>
-                                    </div>
+        {{--<!-- Banner Item Start -->--}}
+        {{--<div class="banner--item" data-bg-img="img/banner-img/home-version-1/slider-bg-03.jpg" data-overlay="0.75">--}}
+            {{--<div class="vc--parent">--}}
+                {{--<div class="vc--child">--}}
+                    {{--<div class="container">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-10 col-md-offset-1">--}}
+                                {{--<!-- Banner Content Start -->--}}
+                                {{--<div class="banner--content pt--70 pb--80 text-center">--}}
+                                    {{--<div class="title">--}}
+                                        {{--<h1 class="h1 text-lightgray">Welcome To Community</h1>--}}
+                                    {{--</div>--}}
 
-                                    <div class="sub-title">
-                                        <h2 class="h2 text-lightgray">Connect, Share &amp; Engage</h2>
-                                    </div>
+                                    {{--<div class="sub-title">--}}
+                                        {{--<h2 class="h2 text-lightgray">Connect, Share &amp; Engage</h2>--}}
+                                    {{--</div>--}}
 
-                                    <div class="desc text-gray fs--16">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-                                    </div>
+                                    {{--<div class="desc text-gray fs--16">--}}
+                                        {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>--}}
+                                    {{--</div>--}}
 
-                                    <div class="action text-uppercase">
-                                        <a href="#" class="btn btn-white">Learn More</a>
-                                        <a href="#" class="btn btn-primary">See Members</a>
-                                    </div>
-                                </div>
-                                <!-- Banner Content End -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Banner Item End -->
-    </div>
+                                    {{--<div class="action text-uppercase">--}}
+                                        {{--<a href="#" class="btn btn-white">Learn More</a>--}}
+                                        {{--<a href="#" class="btn btn-primary">See Members</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<!-- Banner Content End -->--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<!-- Banner Item End -->--}}
+    {{--</div>--}}
     <!-- Banner Slider End -->
 </section>
 <!-- Banner Section End -->
@@ -1623,103 +1646,41 @@
     </div>
 </section>
 <!-- Why Choose Us Section End -->
+<img src="" class="img--embed-full">
+@endsection
 
-<!-- FAQ and Download Section Start -->
-<section class="section pt--70 pb--20">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 pb--60">
-                <!-- FAQ Items Start -->
-                <div class="faq--items" id="faqItems" data-scroll-reveal="group">
-                    <div class="title pb--20">
-                        <h2 class="h2 fw--600">Frequently Asked Question</h2>
-                    </div>
+@section('js')
 
-                    <!-- FAQ Item Start -->
-                    <div class="faq--item style--1 panel">
-                        <div class="title">
-                            <h3 class="h6 fw--700 text-darker">
-                                <a href="#faqItem01" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
-                                    <span>How can I register?</span>
-                                </a>
-                            </h3>
-                        </div>
+    <script>
+        var map = L.map('map').setView([39.195, 34.856], 6);
 
-                        <div id="faqItem01" class="content collapse">
-                            <div class="content--inner">
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words even slightly believable.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Item End -->
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-                    <!-- FAQ Item Start -->
-                    <div class="faq--item style--1 panel">
-                        <div class="title">
-                            <h3 class="h6 fw--700 text-darker">
-                                <a href="#faqItem02" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
-                                    <span>What are the benefits of premium plans?</span>
-                                </a>
-                            </h3>
-                        </div>
+        var LeafIcon = L.Icon.extend({
+            options: {
+                shadowUrl: 'leaf-shadow.png',
+                iconSize:     [70, 70],
+                shadowSize:   [50, 64],
+                iconAnchor:   [22, 94],
+                shadowAnchor: [4, 62],
+                popupAnchor:  [-3, -76]
+            }
+        });
 
-                        <div id="faqItem02" class="content collapse">
-                            <div class="content--inner">
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words even slightly believable.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Item End -->
+        var greenIcon = new LeafIcon({iconUrl: '{{ asset('location.png') }}'}),
+            redIcon = new LeafIcon({iconUrl: '{{ asset('location.png') }}'}),
+            orangeIcon = new LeafIcon({iconUrl: '{{ asset('location.png') }}'});
 
-                    <!-- FAQ Item Start -->
-                    <div class="faq--item style--1 panel">
-                        <div class="title">
-                            <h3 class="h6 fw--700 text-darker">
-                                <a href="#faqItem03" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
-                                    <span>How can I renew my plan?</span>
-                                </a>
-                            </h3>
-                        </div>
+        @foreach(\App\Event::all() as $event)
+            L.marker([{{ $event->locationx }}, {{ $event->locationy }}], {icon: greenIcon}).bindPopup('<img src="{{ asset($event->image) }}" class="img--embed-full"/><p><a href="/events/{{ $event->tag }}">{{ $event->name }}</a></p><p>{{ $event->description }}</p>').addTo(map);
+        @endforeach
+        {{--<img src="{{ asset($event->image) }}" width="250px"/>--}}
 
-                        <div id="faqItem03" class="content collapse">
-                            <div class="content--inner">
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words even slightly believable.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Item End -->
-                </div>
-                <!-- FAQ Items End -->
-            </div>
+        // L.marker([38, 36], {icon: redIcon}).bindPopup("I am a red leaf.").addTo(map);
+        // L.marker([41, 29], {icon: orangeIcon}).bindPopup("I am an orange leaf.").addTo(map);
 
-            <div class="col-md-7 pb--60">
-                <!-- Download Block Start -->
-                <div class="download--block" data-scroll-reveal="group">
-                    <div class="img">
-                        <img src="img/download-img/mobile.png" alt="">
-                    </div>
-
-                    <div class="info">
-                        <div class="title">
-                            <h2 class="h2 fw--600">Download Application &amp; Get More Features</h2>
-                        </div>
-
-                        <div class="content fs--12">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industtry's statndard dummy specimen book. Lorem Ipsum which looks reasonable. The generated Lorem Ipsum words etc.</p>
-                        </div>
-
-                        <div class="action text-uppercase">
-                            <a href="#" class="btn btn-sm btn-google"><i class="fa mr--8 fa-play"></i>Play Store</a>
-                            <a href="#" class="btn btn-sm btn-apple"><i class="fa mr--8 fa-apple"></i>App Store</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Download Block End -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- FAQ and Download Section End -->
-
+    </script>
 
 @endsection
