@@ -50,4 +50,9 @@ class UserController extends Controller
 
         return back();
     }
+
+    public function adminUsers()
+    {
+        return view('admin.users.index');
+    }
 }

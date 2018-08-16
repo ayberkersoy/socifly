@@ -111,17 +111,17 @@
                         <i class="fa fa-dashboard"></i> <span>Anasayfa</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="/admin/groups">
                         <i class="fa fa-group"></i> <span>Gruplar</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="/admin/events">
                         <i class="fa fa-calendar"></i> <span>Etkinlikler</span>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="/admin/users">
                         <i class="fa fa-user"></i> <span>Üyeler</span>
                     </a>

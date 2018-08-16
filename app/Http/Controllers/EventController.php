@@ -23,4 +23,9 @@ class EventController extends Controller
         $event->users()->attach(auth()->id());
         return back();
     }
+
+    public function adminEvents()
+    {
+        return view('admin.events.index');
+    }
 }

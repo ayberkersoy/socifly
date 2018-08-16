@@ -48,6 +48,6 @@ class GroupController extends Controller
 
     public function adminGroups()
     {
-        return view('admin.groups.groups');
+        return view('admin.groups.index');
     }
 }

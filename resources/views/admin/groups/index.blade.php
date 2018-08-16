@@ -10,7 +10,7 @@
                 Gruplar
             </h1>
             <ol class="breadcrumb">
-                <li><a href="/admin/groups"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
+                <li><a href="/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                 <li class="active">Gruplar</li>
             </ol>
         </section>
