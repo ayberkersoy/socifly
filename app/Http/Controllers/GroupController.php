@@ -45,4 +45,9 @@ class GroupController extends Controller
     {
         return view('groups.group-events', compact('group'));
     }
+
+    public function adminGroups()
+    {
+        return view('admin.groups.groups');
+    }
 }

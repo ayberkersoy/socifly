@@ -151,10 +151,7 @@
     @yield('content')
 
     <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2
-        </div>
-        <strong>Copyright &copy; 2014-2017 <a href="http://www.codestepajans.com" target="_blank">Code Step Ajans</a>.</strong> Tüm Hakları saklıdır.
+        <p>Tüm Hakları Saklıdır.</p>
     </footer>
 
     <!-- Control Sidebar -->
