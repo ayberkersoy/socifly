@@ -39,3 +39,14 @@ Route::post('forum/{forum}/{subForum}/topics', 'TopicController@store');
 Route::post('users/{user}', 'UserController@update');
 
 Route::post('forum/{forum}/{subForum}/{topic}/{topicReply}/answer', 'AnswerController@store');
+
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/', 'SettingController@adminIndex');
+    Route::get('groups', 'GroupController@adminGroups');
+    Route::get('events', 'EventController@adminEvents');
+    Route::get('users', 'UserController@adminUsers');
+    Route::get('forum', 'ForumController@adminForum');
+    Route::get('sub-forum', 'ForumController@adminSubForum');
+    Route::get('forum-topics', 'ForumController@adminForumTopics');
+    Route::get('forum-posts', 'ForumController@adminForumPosts');
+});

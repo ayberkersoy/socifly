@@ -23,4 +23,9 @@ class SettingController extends Controller
     {
 
     }
+
+    public function adminIndex()
+    {
+        return view('admin.index');
+    }
 }
