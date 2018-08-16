@@ -27,31 +27,34 @@
                         <!-- Topics List Start -->
                         <div class="topics--list">
                             <table class="table">
-                                <thead class="ff--primary fs--14 text-darkest">
-                                <tr>
-                                    <th>Forum</th>
-                                    <th>Alt Başlıklar</th>
-                                    <th>Konular</th>
-                                    <th>Gönderiler</th>
-                                </tr>
-                                </thead>
+                                {{--<thead class="ff--primary fs--14 text-darkest">--}}
+                                {{--<tr>--}}
+                                    {{--<th>Forum</th>--}}
+                                    {{--<th>Alt Başlıklar</th>--}}
+                                    {{--<th>Konular</th>--}}
+                                    {{--<th>Gönderiler</th>--}}
+                                {{--</tr>--}}
+                                {{--</thead>--}}
 
                                 <tbody>
                                     @foreach($forums as $forum)
                                         <tr>
                                             <td>
-                                                <h4 class="h6 fw--500 text-darkest"><a href="/forum/{{ $forum->tag }}" class="btn-link">{{ $forum->name }}</a></h4>
+                                                <h4 class="h6 fw--700 text-darkest fs--16"><i class="fa fa-comments-o"></i> <a href="/forum/{{ $forum->tag }}" class="btn-link">{{ $forum->name }}</a></h4>
 
                                                 <p>{{ $forum->description }}</p>
                                             </td>
                                             <td>
+                                                <p class="ff--primary fw--500 fs--14 text-darkest">Alt Başlıklar</p>
                                                 <p class="ff--primary fw--500 fs--14 text-darkest">{{ $forum->sub_forum->count() }}</p>
                                             </td>
                                             <td>
+                                                <p class="ff--primary fw--500 fs--14 text-darkest">Konular</p>
                                                 <p class="ff--primary fw--500 fs--14 text-darkest">{{ $forum->topic->count() }}</p>
                                             </td>
                                             <td>
-                                                <p class="ff--primary fw--500 fs--14 text-darkest">{{ $forum->topic_replies->count() }}</p>
+                                                <p class="ff--primary fw--500 fs--14 text-darkest text-center">Gönderiler</p>
+                                                <p class="ff--primary fw--500 fs--14 text-darkest text-center">{{ $forum->topic_replies->count() }}</p>
                                             </td>
                                         </tr>
                                     @endforeach

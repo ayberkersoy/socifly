@@ -32,7 +32,7 @@
                                 <thead class="ff--primary fs--14 text-darkest">
                                 <tr>
                                     <th>Konular</th>
-                                    <th>Gönderiler</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
 
@@ -40,10 +40,11 @@
                                     @foreach($forum->topic as $topic)
                                         <tr class="pinned">
                                             <td>
-                                                <h4 class="h6 fw--500 text-darkest"><a href="/forum/{{ $forum->tag }}/{{ $subForum->tag }}/{{ $topic->tag }}/replies" class="btn-link">{{ $topic->name }}</a></h4>
+                                                <h4 class="h6 fw--700 text-darkest"><a href="/forum/{{ $forum->tag }}/{{ $subForum->tag }}/{{ $topic->tag }}/replies" class="btn-link">{{ $topic->name }}</a></h4>
                                             </td>
                                             <td>
-                                                <p class="ff--primary fw--500 fs--14 text-darkest">{{ $topic->topic_replies->count() }}</p>
+                                                <p class="ff--primary fw--500 fs--14 text-darkest text-center">Gönderiler</p>
+                                                <p class="ff--primary fw--500 fs--14 text-darkest text-center">{{ $topic->topic_replies->count() }}</p>
                                             </td>
                                         </tr>
                                     @endforeach
