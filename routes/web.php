@@ -49,4 +49,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('sub-forum', 'ForumController@adminSubForum');
     Route::get('forum-topics', 'ForumController@adminForumTopics');
     Route::get('forum-posts', 'ForumController@adminForumPosts');
+
+    Route::post('/', 'SettingController@update');
 });
