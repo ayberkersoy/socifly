@@ -13,6 +13,11 @@ class GroupController extends Controller
         Carbon::setLocale('tr');
     }
 
+    public function create()
+    {
+        return view('admin.groups.create');
+    }
+
     public function index()
     {
         $groups = Group::paginate(12);
@@ -22,6 +27,41 @@ class GroupController extends Controller
     public function show(Group $group)
     {
         return view('groups.show', compact('group'));
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'desc' => 'required'
+        ], [
+            'required' => ':attribute alanı zorunludur.'
+        ]);
+        if ($request->hasFile('logo')) {
+            $logo = $request->logo->store('images');
+            Group::create([
+                'name' => $request->name,
+                'description' => $request->desc,
+                'tag' => str_slug($request->name),
+                'image' => $logo
+            ]);
+        }elseif($request->hasFile('banner')){
+            $banner = $request->banner->store('images');
+            Group::create([
+                'name' => $request->name,
+                'description' => $request->desc,
+                'tag' => str_slug($request->name),
+                'banner' => $banner
+            ]);
+        }else {
+            Group::create([
+                'name' => $request->name,
+                'description' => $request->desc,
+                'tag' => str_slug($request->name)
+            ]);
+        }
+
+        return redirect('/admin/groups');
     }
 
     public function forumIndex(Group $group)

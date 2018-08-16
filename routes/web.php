@@ -42,7 +42,9 @@ Route::post('forum/{forum}/{subForum}/{topic}/{topicReply}/answer', 'AnswerContr
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/', 'SettingController@adminIndex');
+
     Route::get('groups', 'GroupController@adminGroups');
+    Route::get('groups/create', 'GroupController@create');
     Route::get('events', 'EventController@adminEvents');
     Route::get('users', 'UserController@adminUsers');
     Route::get('forum', 'ForumController@adminForum');
@@ -51,4 +53,5 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('forum-posts', 'ForumController@adminForumPosts');
 
     Route::post('/', 'SettingController@update');
+    Route::post('groups', 'GroupController@store');
 });
