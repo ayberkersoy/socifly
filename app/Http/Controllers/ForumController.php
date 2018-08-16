@@ -35,4 +35,24 @@ class ForumController extends Controller
     {
         return view('forums.topic-forum', compact('forum', 'subForum', 'topic'));
     }
+
+    public function adminForum()
+    {
+        return view('admin.forum.index');
+    }
+
+    public function adminSubForum()
+    {
+        return view('admin.forum.sub-forum');
+    }
+
+    public function adminForumTopics()
+    {
+        return view('admin.forum.forum-topics');
+    }
+
+    public function adminForumPosts()
+    {
+        return view('admin.forum.forum-posts');
+    }
 }

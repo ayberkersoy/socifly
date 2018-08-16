@@ -15,7 +15,7 @@ class TopicReply extends Model
 
     public function forum()
     {
-        return $this->belongsTo(Forun::class);
+        return $this->belongsTo(Forum::class);
     }
 
     public function sub_forum()
