@@ -43,7 +43,8 @@ class GroupController extends Controller
                 'name' => $request->name,
                 'description' => $request->desc,
                 'tag' => str_slug($request->name),
-                'image' => $logo
+                'image' => $logo,
+                'user_id' => auth()->id()
             ]);
         }elseif($request->hasFile('banner')){
             $banner = $request->banner->store('images');
@@ -51,13 +52,15 @@ class GroupController extends Controller
                 'name' => $request->name,
                 'description' => $request->desc,
                 'tag' => str_slug($request->name),
-                'banner' => $banner
+                'banner' => $banner,
+                'user_id' => auth()->id()
             ]);
         }else {
             Group::create([
                 'name' => $request->name,
                 'description' => $request->desc,
-                'tag' => str_slug($request->name)
+                'tag' => str_slug($request->name),
+                'user_id' => auth()->id()
             ]);
         }
 
