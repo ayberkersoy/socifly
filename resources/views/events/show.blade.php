@@ -13,15 +13,26 @@
                 <h2 class="h3 fw--600">{{ $event->name }}</h2>
             </div>
 
-            <div class="cover--user-activity">
-                <p><i class="fa mr--8 fa-calendar"></i>{{ $event->date }}</p>
-                <p><i class="fa mr--8 fa-clock-o"></i>{{ $event->start_time }}</p>
-                <p><i class="fa mr--8 fa-map-marker"></i>{{ $event->location }}</p>
+            <div class="cover--user-activity pull-left col-md-4 pt--10">
+                <ul class="ff--primary fs--14 fw--500" style="list-style: none;">
+                    <li style="text-align: left;">
+                        <p><i class="fa fa-calendar"></i> {{ $event->date }}</p><br>
+                    </li>
+                    <li style="text-align: left; margin-top: -20px;">
+                        <p><i class="fa fa-clock-o"></i> {{ $event->start_time }}</p><br>
+                    </li>
+                    <li style="text-align: left; margin-top: -20px;">
+                        <p><i class="fa fa-map-marker"></i> {{ $event->location }}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="cover--user-activity pull-left col-md-8 pt--10">
+                <p style="text-align: left;">{{ $event->description }}</p>
             </div>
 
-            <div class="cover--user-desc fw--400 fs--18 fstyle--i text-darkest">
-                <p>{{ $event->description }}</p>
-            </div>
+            {{--<div class="cover--user-desc fw--400 fs--18 fstyle--i text-darkest">--}}
+                {{--<p>{{ $event->description }}</p>--}}
+            {{--</div>--}}
         </div>
     </div>
     <!-- Cover Header End -->
@@ -44,10 +55,14 @@
                                         <li class="pull-right">
                                             <form action="/events/{{ $event->tag }}/users" method="POST">
                                                 {{ csrf_field() }}
-                                                <input type="submit" class="btn btn-info" value="Katıl">
+                                                <input type="submit" class="btn btn-info" value="Etkinliğe Katıl">
                                             </form>
                                         </li>
                                     @endif
+                                @else
+                                    <li class="pull-right">
+                                        Etkinliğe katılmak için <button class="btn btn-success" onclick="location.href='/login';">Giriş Yapın</button>
+                                    </li>
                                 @endif
                             </ul>
                         </div>

@@ -943,7 +943,7 @@
                 <!-- Section Title End -->
 
                 <!-- Member Slider Start -->
-                <div class="member--slider owl-carousel" data-owl-items="{{ \App\User::count() }}" data-owl-autoplay="false" data-bg-img="img/members-img/pattern-bg.png" data-owl-nav="true" data-owl-center="true" data-owl-responsive='{"0": {"items": "1"}, "486": {"items": "{{ \App\User::count() }}"}, "992": {"items": "{{ \App\User::count() }}"}}'>
+                <div class="member--slider owl-carousel" data-owl-items="{{ \App\User::count() }}" data-owl-autoplay="false" data-bg-img="img/members-img/pattern-bg.png" data-owl-nav="true" data-owl-center="true" data-owl-responsive='{"0": {"items": "4"}, "486": {"items": "10"}, "992": {"items": "10"}}'>
                     @foreach(\App\User::all() as $user)
                         <!-- Member Item Start -->
                         <div class="member--item online">

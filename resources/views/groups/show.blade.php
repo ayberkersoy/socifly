@@ -62,6 +62,10 @@
                                             </form>
                                         </li>
                                     @endif
+                                @else
+                                    <li class="pull-right">
+                                        Gruba katılmak için <button class="btn btn-success" onclick="location.href='/login';">Giriş Yapın</button>
+                                    </li>
                                 @endif
                             </ul>
                         </div>
