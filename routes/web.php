@@ -7,6 +7,7 @@ Route::get('groups/{group}', 'GroupController@show');
 Route::get('groups/{group}/forum', 'GroupController@forumIndex');
 Route::get('groups/{group}/users', 'GroupController@usersIndex');
 Route::get('groups/{group}/events', 'GroupController@eventsIndex');
+Route::get('groups/{group}/events/create', 'GroupController@eventsCreate');
 
 Route::get('events', 'EventController@index');
 Route::get('events/{event}', 'EventController@show');
@@ -29,6 +30,7 @@ Auth::routes();
 
 Route::post('/groups/{group}/posts', 'GroupPostController@store');
 Route::post('/groups/{group}/users', 'GroupController@joinGroup');
+Route::post('groups/{group}/events', 'GroupController@storeEvent');
 
 Route::post('/events/{event}/users', 'EventController@joinEvent');
 

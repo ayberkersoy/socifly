@@ -53,7 +53,10 @@
                                 <li><a href="/groups/{{ $group->tag }}/events">Etkinlikler</a></li>
                                 @if(Auth::check())
                                     @if($group->users()->where('user_id', auth()->id())->exists())
-
+                                        <li class="pull-right">
+                                            <button class="btn btn-info">Katıldınız</button>
+                                            <button class="btn btn-success" onclick="location.href='/groups/{{ $group->tag }}/events/create';"><i class="fa fa-plus"></i> Yeni Etkinlik Oluştur</button>
+                                        </li>
                                     @else
                                         <li class="pull-right">
                                             <form action="/groups/{{ $group->tag }}/users" method="POST">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Group;
+use App\Event;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -92,5 +93,56 @@ class GroupController extends Controller
     public function adminGroups()
     {
         return view('admin.groups.index');
+    }
+
+    public function eventsCreate(Group $group)
+    {
+        return view('events.create', compact('group'));
+    }
+
+    public function storeEvent(Request $request, Group $group)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'desc' => 'required',
+            'location' => 'required',
+            'date' => 'required',
+            'start_time' => 'required',
+            'image' => 'required',
+            'banner' => 'required',
+        ]);
+        if ($request->hasFile('image') AND $request->hasFile('banner')) {
+            $logo = $request->image->store('images');
+            $banner = $request->banner->store('images');
+            Event::create([
+                'name' => $request->name,
+                'description' => $request->desc,
+                'location' => $request->location,
+                'date' => $request->date,
+                'start_time' => $request->start_time,
+                'end_time' => '18:00',
+                'image' => $logo,
+                'banner' => $banner,
+                'group_id' => $group->id,
+                'tag' => str_slug($request->name),
+                'locationx' => $request->locationx,
+                'locationy' => $request->locationy
+            ]);
+        }else {
+            Event::create([
+                'name' => $request->name,
+                'description' => $request->desc,
+                'location' => $request->location,
+                'date' => $request->date,
+                'start_time' => $request->start_time,
+                'end_time' => '18:00',
+                'group_id' => $group->id,
+                'tag' => str_slug($request->name),
+                'locationx' => $request->locationx,
+                'locationy' => $request->locationy
+            ]);
+        }
+
+        return redirect('/groups/'. $group->tag .'/events');
     }
 }
