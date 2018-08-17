@@ -13,10 +13,37 @@ class UserController extends Controller
         Carbon::setLocale('tr');
     }
 
+    public function create()
+    {
+        return view('admin.users.create');
+    }
+
     public function index()
     {
         $users = User::where('status', 1)->paginate(12);
         return view('users.index', compact('users'));
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'surname' => 'required',
+            'email' => 'required|unique:users',
+            'username' => 'required|unique:users',
+            'password' => 'required',
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'status' => 1
+        ]);
+
+        return redirect('/admin/users');
     }
 
     public function show(User $user)
