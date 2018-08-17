@@ -123,7 +123,7 @@
 
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <textarea name="post" placeholder="Gönderi *" class="form-control" required></textarea>
+                                                <textarea name="post" placeholder="Gönderi *" class="form-control" id="ckeditor" required></textarea>
                                             </div>
                                         </div>
 
@@ -156,4 +156,11 @@
     </section>
     <!-- Page Wrapper End -->
 
+@endsection
+
+@section('js')
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor.create( document.querySelector( '#ckeditor' ) );
+    </script>
 @endsection
