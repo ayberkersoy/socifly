@@ -53,7 +53,7 @@
 
                                             <div class="activity">
                                                 <p><i class="fa mr--8 fa-user"></i>{{ $user->username }}</p>
-                                                <p><i class="fa mr--8 fa-mail-forward"></i>{{ $user->email }}</p>
+                                                <p><i class="fa mr--8 fa-mail-forward"></i><a href="mailto:{{ $user->email }}">Mail Gönder</a></p>
                                                 <p><i class="fa mr--8 fa-briefcase"></i>{{ $user->job }}</p>
                                             </div>
                                             @if($user->groups->count() > 0)

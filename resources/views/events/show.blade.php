@@ -16,13 +16,13 @@
             <div class="cover--user-activity pull-left col-md-4 pt--10">
                 <ul class="ff--primary fs--14 fw--500" style="list-style: none;">
                     <li style="text-align: left;">
-                        <p><i class="fa fa-calendar"></i> {{ $event->date }}</p><br>
+                        <p style="color: #1da1f2;"><i class="fa fa-calendar"></i> {{ $event->date }}</p><br>
                     </li>
                     <li style="text-align: left; margin-top: -20px;">
-                        <p><i class="fa fa-clock-o"></i> {{ $event->start_time }}</p><br>
+                        <p style="color: #1da1f2;"><i class="fa fa-clock-o"></i> {{ $event->start_time }}</p><br>
                     </li>
                     <li style="text-align: left; margin-top: -20px;">
-                        <p><i class="fa fa-map-marker"></i> {{ $event->location }}</p>
+                        <p style="color: #1da1f2;"><i class="fa fa-map-marker"></i> {{ $event->location }}</p>
                     </li>
                 </ul>
             </div>
@@ -50,7 +50,9 @@
                                 <li class="active"><a href="#">Katılımcılar: {{ $event->users->count() }}</a></li>
                                 @if(Auth::check())
                                     @if($event->users()->where('user_id', auth()->id())->exists())
-
+                                        <li class="pull-right">
+                                            <button class="btn btn-info">Katıldınız</button>
+                                        </li>
                                     @else
                                         <li class="pull-right">
                                             <form action="/events/{{ $event->tag }}/users" method="POST">
