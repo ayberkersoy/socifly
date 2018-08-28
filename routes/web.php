@@ -43,7 +43,7 @@ Route::post('users/{user}', 'UserController@update');
 
 Route::post('forum/{forum}/{subForum}/{topic}/{topicReply}/answer', 'AnswerController@store');
 
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+Route::middleware(['admin'])->prefix('admin')->group(function () {
     Route::get('/', 'SettingController@adminIndex');
 
     Route::get('groups', 'GroupController@adminGroups');
