@@ -82,4 +82,10 @@ class UserController extends Controller
     {
         return view('admin.users.index');
     }
+
+    public function destroy(User $user)
+    {
+        $user->delete();
+        return back();
+    }
 }
