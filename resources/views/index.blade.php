@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="desc">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Üye olun, gruplara, etkinliklere, tartışmalara katılın!</p>
                     </div>
                 </div>
                 <!-- Feature Item End -->
@@ -59,7 +59,7 @@
                     </div>
 
                     <div class="desc">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Etkinlik planlayın ve hep birlikte vakit geçirin!</p>
                     </div>
                 </div>
                 <!-- Feature Item End -->
@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="desc">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Forum içerisinde dilediğiniz konuda fikirlerinizi belirtin!</p>
                     </div>
                 </div>
                 <!-- Feature Item End -->
@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="desc">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>Gruplara katılın ve birlikte bir şeyler planlayın!</p>
                     </div>
                 </div>
                 <!-- Feature Item End -->
@@ -114,9 +114,9 @@
                 <h2 class="h2">Nasıl Çalışır?</h2>
             </div>
 
-            <div class="sub-title">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has industry's.</p>
-            </div>
+            {{--<div class="sub-title">--}}
+                {{--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has industry's.</p>--}}
+            {{--</div>--}}
         </div>
         <!-- Section Title End -->
 
@@ -124,19 +124,19 @@
             <div class="col-md-7 pb--40">
                 <div class="row gutter--15 AdjustRow" data-scroll-reveal="group">
                     <div class="col-xs-4 pb--15">
-                        <img src="img/how-it-works-img/01.jpg" alt="">
+                        <img src="{{ asset('images/learn.png') }}" style="width: 222px !important; height: 150px !important;" alt="">
                     </div>
 
                     <div class="col-xs-4 pb--15">
-                        <img src="img/how-it-works-img/02.jpg" alt="">
+                        <img src="{{ asset('images/forum.png') }}" style="width: 222px !important; height: 150px !important;" alt="">
                     </div>
 
                     <div class="col-xs-4 pb--15">
-                        <img src="img/how-it-works-img/03.jpg" alt="">
+                        <img src="{{ asset('images/group.jpg') }}" style="width: 222px !important; height: 150px !important;" alt="">
                     </div>
 
                     <div class="col-xs-12">
-                        <img src="img/how-it-works-img/04.jpg" alt="">
+                        <img src="{{ asset('images/events.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@
                             </div>
 
                             <div class="desc">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <p>Hızlıca üyeliğinizi oluşturun!</p>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                             </div>
 
                             <div class="desc">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <p>Dahil olmak istediğiniz grupları seçin!</p>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                             </div>
 
                             <div class="desc">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <p>Forumumuzda bir tartışma başlatın!</p>
                             </div>
                         </div>
                     </div>
@@ -210,7 +210,7 @@
                             </div>
 
                             <div class="desc">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <p>Birlikte etkinliklere gidin!</p>
                             </div>
                         </div>
                     </div>
