@@ -59,7 +59,7 @@
                                 <td>{{ $event->name }}</td>
                                 <td>{{ $event->users->count() }}</td>
                                 <td>
-                                    <form action="/admin/groups/{{ $event->tag }}" method="post">
+                                    <form action="/admin/events/{{ $event->tag }}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o"></i></button>

@@ -65,7 +65,7 @@
                                 <td>{{ $user->username }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>
-                                    <form action="/admin/groups/{{ $user->username }}" method="post">
+                                    <form action="/admin/users/{{ $user->username }}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o"></i></button>

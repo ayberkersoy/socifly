@@ -63,4 +63,9 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::post('groups', 'GroupController@store');
     Route::post('events', 'EventController@store');
     Route::post('users', 'UserController@store');
+
+    Route::delete('groups/{group}', 'GroupController@destroy');
+    Route::delete('events/{event}', 'EventController@destroy');
+    Route::delete('groups/{group}', 'GroupController@destroy');
+    Route::delete('groups/{group}', 'GroupController@destroy');
 });

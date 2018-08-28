@@ -90,4 +90,10 @@ class EventController extends Controller
     {
         return view('admin.events.index');
     }
+
+    public function destroy(Event $event)
+    {
+        $event->delete();
+        return back();
+    }
 }

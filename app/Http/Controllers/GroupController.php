@@ -145,4 +145,10 @@ class GroupController extends Controller
 
         return redirect('/groups/'. $group->tag .'/events');
     }
+
+    public function destroy(Group $group)
+    {
+        $group->delete();
+        return back();
+    }
 }
