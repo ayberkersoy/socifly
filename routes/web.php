@@ -59,6 +59,8 @@ Route::middleware(['admin'])->prefix('admin')->group(function () {
     Route::get('forum/create', 'ForumController@create');
 
     Route::get('sub-forum', 'ForumController@adminSubForum');
+    Route::get('subForum/create', 'SubForumController@create');
+
     Route::get('forum-topics', 'ForumController@adminForumTopics');
     Route::get('forum-posts', 'ForumController@adminForumPosts');
 
@@ -67,6 +69,7 @@ Route::middleware(['admin'])->prefix('admin')->group(function () {
     Route::post('events', 'EventController@store');
     Route::post('users', 'UserController@store');
     Route::post('forum', 'ForumController@store');
+    Route::post('subForum', 'SubForumController@store');
 
     Route::delete('groups/{group}', 'GroupController@destroy');
     Route::delete('events/{event}', 'EventController@destroy');
