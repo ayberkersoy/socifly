@@ -37,4 +37,10 @@ class TopicReplyController extends Controller
 
         return back();
     }
+
+    public function destroy(TopicReply $topicReply)
+    {
+        $topicReply->delete();
+        return back();
+    }
 }

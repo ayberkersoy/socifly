@@ -68,4 +68,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::delete('events/{event}', 'EventController@destroy');
     Route::delete('forum/{forum}', 'ForumController@destroy');
     Route::delete('sub-forum/{subForum}', 'SubForumController@destroy');
+    Route::delete('forum-topic/{topic}', 'TopicController@destroy');
+    Route::delete('forum-posts/{topicReply}', 'TopicReplyController@destroy');
 });

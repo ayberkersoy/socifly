@@ -30,4 +30,10 @@ class TopicController extends Controller
 
         return back();
     }
+
+    public function destroy(Topic $topic)
+    {
+        $topic->delete();
+        return back();
+    }
 }
