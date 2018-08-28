@@ -1,6 +1,7 @@
 <?php
 
 Route::get('/', 'SettingController@index');
+Route::get('/contact', 'SettingController@contact');
 
 Route::get('groups', 'GroupController@index');
 Route::get('groups/{group}', 'GroupController@show');

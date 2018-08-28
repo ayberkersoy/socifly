@@ -20,6 +20,11 @@ class SettingController extends Controller
         return view('index', compact('event'));
     }
 
+    public function contact()
+    {
+        return view('contact');
+    }
+
     public function update(Request $request)
     {
         $setting = Setting::first();
