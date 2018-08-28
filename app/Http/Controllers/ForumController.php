@@ -15,6 +15,11 @@ class ForumController extends Controller
     {
         Carbon::setLocale('tr');
     }
+
+    public function create()
+    {
+        return view('admin.forum.create');
+    }
     public function index()
     {
         $forums = Forum::all();
@@ -24,6 +29,19 @@ class ForumController extends Controller
     public function show(Forum $forum)
     {
         return view('forums.show', compact('forum'));
+    }
+
+    public function store(Request $request)
+    {
+        Forum::create([
+            'name' => $request->name,
+            'description' => $request->desc,
+            'tag' => str_slug($request->name),
+            'user_id' => auth()->id(),
+            'group_id' => $request->group_id,
+        ]);
+
+        return redirect('/admin/forum');
     }
 
     public function showSubForum(Forum $forum, SubForum $subForum)
