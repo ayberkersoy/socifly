@@ -55,4 +55,10 @@ class ForumController extends Controller
     {
         return view('admin.forum.forum-posts');
     }
+
+    public function destroy(Forum $forum)
+    {
+        $forum->delete();
+        return back();
+    }
 }
