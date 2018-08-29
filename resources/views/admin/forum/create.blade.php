@@ -61,6 +61,16 @@
                             <tr>
                                 <td>
                                     <p>
+                                        Forum Sırası
+                                    </p>
+                                </td>
+                                <td>
+                                    <input type="text" name="order" class="form-control" value="0"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>
                                         Bağlı Olduğu Grup
                                     </p>
                                 </td>

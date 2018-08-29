@@ -75,14 +75,14 @@
                                                                     {{ $answer->user->username }} dedi ki:
                                                                 </p>
                                                                 <p>
-                                                                    <i class="fa fa-quote-left"></i> {{ $answer->answer }} <i class="fa fa-quote-right"></i>
+                                                                    <i class="fa fa-quote-left"></i> {!! $answer->answer !!} <i class="fa fa-quote-right"></i>
                                                                 </p>
                                                             </div>
 
                                                         @endforeach
                                                     @endif
 
-                                                    <p>{{ $topic_reply->reply }}</p>
+                                                    <p>{!! $topic_reply->reply !!}</p>
                                                 </div>
                                             </div>
                                         </div>

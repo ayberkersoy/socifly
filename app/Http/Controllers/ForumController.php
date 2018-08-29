@@ -22,7 +22,7 @@ class ForumController extends Controller
     }
     public function index()
     {
-        $forums = Forum::all();
+        $forums = Forum::orderBy('order', 'asc')->get();
         return view('forums.index', compact('forums'));
     }
 
@@ -39,6 +39,7 @@ class ForumController extends Controller
             'tag' => str_slug($request->name),
             'user_id' => auth()->id(),
             'group_id' => $request->group_id,
+            'order' => $request->order
         ]);
 
         return redirect('/admin/forum');
