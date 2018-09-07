@@ -146,6 +146,49 @@ class GroupController extends Controller
         return redirect('/groups/'. $group->tag .'/events');
     }
 
+    public function showAdmin(Group $group)
+    {
+        return view('admin.groups.show', compact('group'));
+    }
+
+    public function update(Request $request, Group $group)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'desc' => 'required'
+        ], [
+            'required' => ':attribute alanı zorunludur.'
+        ]);
+        if ($request->hasFile('logo')) {
+            $logo = $request->logo->store('images');
+            $group->update([
+                'name' => $request->name,
+                'description' => $request->desc,
+                'tag' => str_slug($request->name),
+                'image' => $logo,
+                'user_id' => auth()->id()
+            ]);
+        }elseif($request->hasFile('banner')){
+            $banner = $request->banner->store('images');
+            $group->update([
+                'name' => $request->name,
+                'description' => $request->desc,
+                'tag' => str_slug($request->name),
+                'banner' => $banner,
+                'user_id' => auth()->id()
+            ]);
+        }else {
+            $group->update([
+                'name' => $request->name,
+                'description' => $request->desc,
+                'tag' => str_slug($request->name),
+                'user_id' => auth()->id()
+            ]);
+        }
+
+        return redirect('/admin/groups');
+    }
+
     public function destroy(Group $group)
     {
         $group->delete();

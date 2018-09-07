@@ -48,6 +48,7 @@ Route::middleware(['admin'])->prefix('admin')->group(function () {
 
     Route::get('groups', 'GroupController@adminGroups');
     Route::get('groups/create', 'GroupController@create');
+    Route::get('groups/{group}', 'GroupController@showAdmin');
 
     Route::get('events', 'EventController@adminEvents');
     Route::get('events/create', 'EventController@create');
@@ -67,6 +68,7 @@ Route::middleware(['admin'])->prefix('admin')->group(function () {
 
     Route::post('/', 'SettingController@update');
     Route::post('groups', 'GroupController@store');
+    Route::post('groups/{group}', 'GroupController@update');
     Route::post('events', 'EventController@store');
     Route::post('events/{event}', 'EventController@update');
     Route::post('users', 'UserController@store');

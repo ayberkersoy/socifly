@@ -62,6 +62,7 @@
                                     <form action="/admin/groups/{{ $group->tag }}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
+                                        <a href="/admin/groups/{{ $group->tag }}" class="btn btn-info"><i class="fa fa-edit"></i></a>
                                         <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o"></i></button>
                                     </form>
                                 </td>
